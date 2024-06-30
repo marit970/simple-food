@@ -1,0 +1,98 @@
+/* Reset CSS */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #333333;
+  background-color: #fff;
+}
+
+a,
+button,
+textarea,
+input {
+  outline: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+  text-decoration-skip-ink: none;
+}
+
+button {
+  display: inline-block;
+  appearance: none;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  text-decoration-skip-ink: none;
+  text-decoration: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

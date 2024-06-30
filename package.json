@@ -1,0 +1,39 @@
+{
+  "name": "simplefood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marit970/simpleFood.git"
+  },
+  "author": "Margarita Tairova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marit970/simpleFood/issues"
+  },
+  "homepage": "https://github.com/marit970/simpleFood#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.6.0",
+    "browser-sync": "^2.26.13",
+    "del": "^6.1.1",
+    "eslint": "^9.6.0",
+    "globals": "^15.7.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "jquery": "^3.5.1",
+    "prettier": "^3.3.2",
+    "prettier-eslint": "^16.3.0",
+    "sass": "^1.77.6"
+  }
+}
