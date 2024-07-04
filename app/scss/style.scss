@@ -4,10 +4,21 @@
 @import "fonts";
 @import "media";
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   @extend %rubik-400;
   font-size: 16px;
   line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 a,
@@ -113,8 +124,6 @@ button {
 }
 
 .header {
-  padding-bottom: 60px;
-
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -126,6 +135,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 60px;
   }
 
   &__content-info {
