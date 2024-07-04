@@ -24,6 +24,28 @@ button {
   color: $orange-900;
 }
 
+.animated-link {
+  border-radius: 5px;
+  box-shadow: 0 0 0 2px transparent;
+  transition:
+    box-shadow 0.5s ease,
+    color 0.5s ease,
+    text-shadow 0.5s ease;
+
+  &:hover {
+    color: $orange-900;
+  }
+  &:focus {
+    color: $dark;
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  }
+  &:active {
+    color: $dark;
+    box-shadow: 0 0 0 2px transparent;
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+  }
+}
+
 .text {
   @extend %rubik-400;
   font-size: 16px;
@@ -33,6 +55,28 @@ button {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.logo {
+  width: 200px;
+  height: 39px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 2px transparent;
+  transition:
+    box-shadow 0.5s ease,
+    opacity 0.5s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+  &:focus {
+    opacity: 1;
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  }
+  &:active {
+    box-shadow: 0 0 0 2px transparent;
+    opacity: 0.5;
+  }
 }
 
 .header {
