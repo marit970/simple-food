@@ -12,7 +12,7 @@
       <div class="container">
         <div class="header__inner">
           <a class="logo" href="#">
-            <img src="./images/logo.svg" alt="" />
+            <img src="./images/logo.svg" alt="Логотип сайта" />
           </a>
           <nav class="menu">
             <ul class="menu__list">
@@ -20,7 +20,7 @@
                 <a class="menu__link animated-link" href="#">Главная</a>
               </li>
               <li class="menu__list-item">
-                <a class="menu__link animated-link" href="#">Рецепты</a>
+                <a class="menu__link animated-link" href="#">Блюда</a>
               </li>
               <li class="menu__list-item">
                 <a class="menu__link animated-link" href="#">Контакты</a>
@@ -56,6 +56,7 @@
                     stroke-linejoin="round"
                   />
                 </svg>
+                <span class="sr-only">Поиск</span>
               </a>
             </li>
             <li class="actions-list-item">
@@ -103,6 +104,7 @@
                 </svg>
 
                 <div class="actions-list-link-counter">4</div>
+                <span class="sr-only">Корзина товаров</span>
               </a>
             </li>
           </ul>
@@ -118,11 +120,19 @@
               срок – доставка за наш счёт.
             </p>
             <div class="order-buttons">
-              <button class="order-button animated-btn">Заказать</button>
-              <button class="learn-more-button animated-link">Подробнее</button>
+              <button type="button" class="order-button animated-btn">
+                Заказать
+              </button>
+              <button type="button" class="learn-more-button animated-link">
+                Подробнее
+              </button>
             </div>
           </div>
-          <img class="header__img" src="./images/scooter-guy.png" alt="" />
+          <img
+            class="header__img"
+            src="./images/scooter-guy.png"
+            alt="Человек на скутере доставляет еду"
+          />
         </div>
       </div>
     </header>
