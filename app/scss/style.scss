@@ -76,6 +76,33 @@ button {
   }
 }
 
+.animated-btn {
+  border-radius: 5px;
+  box-shadow: 0 0 0 2px transparent;
+  transition:
+    box-shadow 0.5s ease,
+    background-color 0.5s ease,
+    stroke 0.5s ease;
+
+  &:hover {
+    box-shadow:
+      0 0 0 2px rgba(255, 104, 56, 0.7),
+      0 5px 12px 0 rgba(255, 104, 56, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: $orange-900;
+  }
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    background: rgba(255, 122, 80, 0.1);
+    color: $orange-900;
+  }
+  &:active {
+    box-shadow: 0 0 0 2px transparent;
+    background: rgba(255, 122, 80, 0.1);
+    color: $orange-900;
+  }
+}
+
 .text {
   @extend %rubik-400;
   font-size: 16px;
@@ -110,7 +137,7 @@ button {
 }
 
 .header {
-  padding: 0;
+  padding-bottom: 60px;
 
   &__inner {
     display: flex;
@@ -220,6 +247,7 @@ button {
 .order-buttons {
   display: flex;
   gap: 34px;
+  align-items: center;
 }
 
 .order-button {
@@ -234,10 +262,17 @@ button {
 }
 
 .learn-more-button {
+  height: 30px;
   font-size: 20px;
   line-height: 1.5;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   text-align: center;
   color: $darkBlue;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
 }
