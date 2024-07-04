@@ -65,6 +65,7 @@ function images() {
 
 function build() {
   return src([
+    "app/site.webmanifest",
     "app/**/*.html",
     "app/css/style.min.css",
     "app/js/main.min.js",
