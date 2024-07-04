@@ -68,7 +68,7 @@ button {
     box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
     background-color: rgba(255, 122, 80, 0.1);
     & ellipse,
-    path {
+    & path {
       stroke: #000;
     }
   }
@@ -237,23 +237,24 @@ button {
   transition:
     box-shadow 0.5s ease,
     background-color 0.5s ease,
-    stroke 0.5s ease;
+    stroke 0.5s ease,
+    color 0.5s ease;
 
   &:hover {
     box-shadow:
       0 0 0 2px rgba(255, 104, 56, 0.7),
       0 5px 12px 0 rgba(255, 104, 56, 0.2);
-    background: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     color: $orange-900;
   }
   &:focus {
     box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-    background: rgba(255, 122, 80, 0.1);
+    background-color: rgba(255, 122, 80, 0.1);
     color: $orange-900;
   }
   &:active {
     box-shadow: 0 0 0 2px transparent;
-    background: rgba(255, 122, 80, 0.1);
+    background-color: rgba(255, 122, 80, 0.1);
     color: $orange-900;
   }
 }
@@ -266,6 +267,7 @@ button {
   text-decoration-skip-ink: none;
   text-align: center;
   color: $darkBlue;
+  transition: text-decoration 0.5s ease;
 
   &:hover,
   &:focus,
@@ -326,6 +328,18 @@ button {
     border: none;
     border-radius: 4px;
     opacity: 0.9;
+    transition: box-shadow 0.5s ease;
+
+    &::placeholder {
+      transition: color 0.5s ease;
+    }
+
+    &:hover::placeholder {
+      color: $darkBlue;
+    }
+    &:focus {
+      box-shadow: 0 0 0 2px $orange-900;
+    }
   }
 
   &__input::placeholder {
@@ -336,8 +350,10 @@ button {
 
   &__btn {
     font-size: 14px;
-    transition: fill 0.5s ease;
 
+    & path {
+      transition: fill 0.5s ease;
+    }
     &:hover,
     &:focus {
       .subscribe-form__btn-icon path {
@@ -368,6 +384,21 @@ button {
 
     &-item {
       margin-bottom: 15px;
+
+      & .animated-link {
+        & path {
+          transition: stroke 0.5s ease;
+        }
+        &:hover path {
+          stroke: $orange-900;
+        }
+        &:focus path {
+          stroke: $dark;
+        }
+        &:active path {
+          stroke: $dark;
+        }
+      }
     }
 
     &-icon {
@@ -384,6 +415,52 @@ button {
     &-item {
       &:not(:last-child) {
         margin-right: 13px;
+      }
+    }
+
+    &-icon {
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px transparent;
+    }
+
+    &-link {
+      & circle,
+      & path,
+      & svg {
+        transition:
+          fill 0.5s ease,
+          box-shadow 0.5s ease;
+      }
+
+      &:hover {
+        & circle {
+          fill: #ff7a50;
+        }
+        & path {
+          fill: #fff;
+        }
+      }
+      &:focus {
+        & circle {
+          fill: #fff2ed;
+        }
+        & path {
+          fill: $dark;
+        }
+        & svg {
+          box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+        }
+      }
+      &:active {
+        & circle {
+          fill: #fff2ed;
+        }
+        & path {
+          fill: $orange-900;
+        }
+        & svg {
+          box-shadow: 0 0 0 2px transparent;
+        }
       }
     }
   }
