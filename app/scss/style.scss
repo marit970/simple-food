@@ -49,19 +49,30 @@ button {
 .animated-icon {
   border-radius: 5px;
   box-shadow: 0 0 0 2px transparent;
-  transition: all 0.5s ease;
+  transition:
+    box-shadow 0.5s ease,
+    background-color 0.5s ease,
+    stroke 0.5s ease;
 
   &:hover {
-    color: $orange-900;
+    background-color: #ff7a50;
+
+    & ellipse,
+    path {
+      stroke: #fff;
+    }
   }
   &:focus {
-    color: $dark;
     box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    background-color: rgba(255, 122, 80, 0.1);
+    & ellipse,
+    path {
+      stroke: #000;
+    }
   }
   &:active {
-    color: $dark;
     box-shadow: 0 0 0 2px transparent;
-    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    background-color: #fff2ed;
   }
 }
 
@@ -159,32 +170,35 @@ button {
 .actions-list {
   display: flex;
   gap: 12px;
+  text-align: center;
+
+  &-icon {
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+  }
 
   &-link {
     width: 44px;
     height: 44px;
     display: block;
     position: relative;
+    transition:
+      background-color 0.5s ease,
+      color 0.5s ease;
 
-    &::before {
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      width: 18px;
-      height: 18px;
-      display: block;
-      content: "";
-      position: relative;
-      margin: 0 auto;
-      top: 50%;
-      transform: translateY(-50%);
+    &:hover {
+      .actions-list-link-counter {
+        background-color: #fff;
+        color: $orange-900;
+      }
     }
 
-    &--search::before {
-      background-image: url("../images/icons/icon-search.svg");
-    }
-    &--card::before {
-      background-image: url("../images/icons/icon-card.svg");
+    &:focus {
+      .actions-list-link-counter {
+        background-color: $orange-900;
+        color: #fff;
+      }
     }
 
     &-counter {
