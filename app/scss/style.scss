@@ -93,6 +93,18 @@
   }
 }
 
+%regular-text {
+  @extend %rubik-400;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+%background-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 html,
 body {
   height: 100%;
@@ -223,8 +235,7 @@ button {
   }
 
   &__text {
-    font-size: 20px;
-    line-height: 1.5;
+    @extend %regular-text;
     max-width: 450px;
   }
 
@@ -608,6 +619,77 @@ button {
       &:hover {
         box-shadow: 0 0 0 1px $orange-900;
       }
+    }
+  }
+}
+
+.features {
+  padding: $sectionMargin 0;
+  min-height: 585px;
+
+  .title {
+    margin-bottom: $sectionMargin/2;
+  }
+  &__inner {
+    display: flex;
+    gap: 120px;
+    justify-content: center;
+  }
+  &__img {
+    @extend %background-image;
+    background-image: url("../images/food-delivery.png");
+    background-position: left center;
+    max-width: 440px;
+    max-height: 585px;
+    width: 100%;
+  }
+
+  &__button {
+    @extend %primary-button;
+  }
+
+  &__description {
+    @extend %regular-text;
+    margin-bottom: 30px;
+  }
+  &__content {
+    max-width: 470px;
+    margin: 58px 0;
+  }
+
+  &__list {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    font-size: 24px;
+    line-height: 1.5;
+    color: #363853;
+    display: flex;
+    gap: 30px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      content: "";
+      width: 34px;
+      height: 34px;
+      display: inline-block;
+    }
+
+    @extend %background-image;
+    &--timer::before {
+      background-image: url("../images/icons/timer.svg");
+    }
+
+    &--courier::before {
+      background-image: url("../images/icons/delivery.svg");
+    }
+
+    &--restaurant::before {
+      background-image: url("../images/icons/restaurant.svg");
     }
   }
 }
