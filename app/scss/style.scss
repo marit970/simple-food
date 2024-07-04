@@ -46,6 +46,25 @@ button {
   }
 }
 
+.animated-icon {
+  border-radius: 5px;
+  box-shadow: 0 0 0 2px transparent;
+  transition: all 0.5s ease;
+
+  &:hover {
+    color: $orange-900;
+  }
+  &:focus {
+    color: $dark;
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  }
+  &:active {
+    color: $dark;
+    box-shadow: 0 0 0 2px transparent;
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+  }
+}
+
 .text {
   @extend %rubik-400;
   font-size: 16px;
@@ -139,35 +158,48 @@ button {
 
 .actions-list {
   display: flex;
-  gap: 33px;
+  gap: 12px;
 
-  &-item {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    width: 18px;
-    height: 18px;
-  }
-  &-item--search {
-    background-image: url("../images/icons/icon-search.svg");
-  }
-  &-item--card {
+  &-link {
+    width: 44px;
+    height: 44px;
+    display: block;
     position: relative;
-    background-image: url("../images/icons/icon-card.svg");
-  }
 
-  &-link-counter {
-    width: 14px;
-    height: 14px;
-    background-color: $orange-900;
-    border-radius: 50%;
-    font-size: 10px;
-    line-height: 14px;
-    text-align: center;
-    color: #fff;
-    position: absolute;
-    top: -3px;
-    right: -5px;
+    &::before {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      width: 18px;
+      height: 18px;
+      display: block;
+      content: "";
+      position: relative;
+      margin: 0 auto;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--search::before {
+      background-image: url("../images/icons/icon-search.svg");
+    }
+    &--card::before {
+      background-image: url("../images/icons/icon-card.svg");
+    }
+
+    &-counter {
+      width: 14px;
+      height: 14px;
+      background-color: $orange-900;
+      border-radius: 50%;
+      font-size: 10px;
+      line-height: 14px;
+      text-align: center;
+      color: #fff;
+      position: absolute;
+      top: 8px;
+      right: 5px;
+    }
   }
 }
 
