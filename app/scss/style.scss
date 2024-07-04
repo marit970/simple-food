@@ -4,6 +4,27 @@
 @import "fonts";
 @import "media";
 
+body {
+  @extend %rubik-400;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+a,
+button {
+  @extend %rubik-500;
+}
+
+.title {
+  @extend %rubik-500;
+  font-size: 36px;
+}
+
+.text {
+  @extend %rubik-400;
+  font-size: 16px;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
