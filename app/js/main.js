@@ -1,2 +1,2 @@
 // eslint-disable-next-line no-undef
-mixitup(".product__list");
+mixitup('.popular-categories__nav-list');

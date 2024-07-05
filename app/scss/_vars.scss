@@ -1,4 +1,4 @@
-$orange-900: #ff6838;
+$accent-900: #ff6838;
 $silver-200: #ececec;
 $grey: #c2c2c2;
 $darkBlue: #363853;
@@ -7,16 +7,40 @@ $silver-100: #f9faff;
 $sectionMargin: 60px;
 
 %rubik-300 {
-  font-family: "Rubik-Light", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 300;
 }
 
 %rubik-400 {
-  font-family: "Rubik-Regular", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
 }
 
+%rubik-400-italic {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-variant: italic;
+}
+
 %rubik-500 {
-  font-family: "Rubik-Medium", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 500;
+}
+
+%regular-text {
+  @extend %rubik-400;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+%background-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+%display-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -3,35 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href=".images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon/favicon-16x26.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="css/style.min.css" />
-    <title>SimpleFood</title>
+    <title>SimpleFood сервис доставки еды</title>
   </head>
 
   <body>
     <header class="header">
       <div class="container">
-        <div class="header__inner">
-          <a class="logo" href="#">
-            <img src="./images/logo.svg" alt="Логотип сайта" />
+        <nav class="menu header__menu">
+          <a class="logo header__logo" href="#">
+            <img
+              class="logo__img"
+              src="./images/logo.svg"
+              alt="Логотип сайта"
+              width="200"
+              height="39"
+            />
           </a>
-          <nav class="menu">
-            <ul class="menu__list">
-              <li class="menu__list-item">
-                <a class="menu__link animated-link" href="#">Главная</a>
-              </li>
-              <li class="menu__list-item">
-                <a class="menu__link animated-link" href="#">Блюда</a>
-              </li>
-              <li class="menu__list-item">
-                <a class="menu__link animated-link" href="#">Контакты</a>
-              </li>
-            </ul>
-          </nav>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link animated-link menu__link--active" href="#"
+                >Главная</a
+              >
+            </li>
+            <li class="menu__item">
+              <a class="menu__link animated-link" href="#">Блюда</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link animated-link" href="#">Контакты</a>
+            </li>
+          </ul>
           <ul class="actions-list">
-            <li class="actions-list-item">
-              <a class="actions-list-link animated-icon" href="#">
+            <li class="actions-list__item">
+              <a class="actions-list__button animated-icon" href="#">
                 <svg
-                  class="actions-list-icon"
+                  class="actions-list__icon"
                   width="21"
                   height="21"
                   viewBox="0 0 21 21"
@@ -59,10 +83,10 @@
                 <span class="sr-only">Поиск</span>
               </a>
             </li>
-            <li class="actions-list-item">
-              <a class="actions-list-link animated-icon" href="#"
+            <li class="actions-list__item">
+              <a class="actions-list__button animated-icon" href="#"
                 ><svg
-                  class="actions-list-icon"
+                  class="actions-list__icon"
                   width="21"
                   height="20"
                   viewBox="0 0 21 20"
@@ -102,13 +126,12 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-
-                <div class="actions-list-link-counter">4</div>
+                <div class="actions-list__button-counter">4</div>
                 <span class="sr-only">Корзина товаров</span>
               </a>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
     </header>
 
@@ -118,18 +141,28 @@
       <div class="container">
         <div class="footer__top">
           <div class="footer-subscribe">
-            <a class="logo" href="#">
-              <img src="./images/logo.svg" alt="Логотип сайта" />
+            <a class="logo footer__logo" href="#">
+              <img
+                class="logo__img"
+                src="./images/logo.svg"
+                alt="Логотип сайта"
+                width="200"
+                height="39"
+              />
             </a>
-            <div class="subscribe-form">
+            <form class="subscribe-form">
+              <label class="sr-only" for="email">email</label>
               <input
                 class="subscribe-form__input"
                 type="email"
+                name="email"
+                id="email"
                 placeholder="Ваш email"
+                required
               />
-              <button class="primary-button subscribe-form__btn" type="submit">
+              <button class="subscribe-form__btn primary-button" type="submit">
                 <svg
-                  class="subscribe-form__btn-icon"
+                  class="subscribe-form__icon"
                   width="15"
                   height="15"
                   viewBox="0 0 15 15"
@@ -143,62 +176,62 @@
                 </svg>
                 Подписаться
               </button>
-            </div>
+            </form>
           </div>
           <nav class="footer-menu">
             <ul class="footer-menu__list">
-              <li class="footer-menu__list-item">
+              <li class="footer-menu__item">
                 <a class="footer-menu__link animated-link" href="#"
                   >Как это работает</a
                 >
               </li>
-              <li class="footer-menu__list-item">
+              <li class="footer-menu__item">
                 <a class="footer-menu__link animated-link" href="#">Продукты</a>
               </li>
-              <li class="footer-menu__list-item">
+              <li class="footer-menu__item">
                 <a class="footer-menu__link animated-link" href="#">Блюда</a>
               </li>
-              <li class="footer-menu__list-item">
+              <li class="footer-menu__item">
                 <a class="footer-menu__link animated-link" href="#">Меню</a>
               </li>
-              <li class="footer-menu__list-item">
+              <li class="footer-menu__item">
                 <a class="footer-menu__link animated-link" href="#">О нас</a>
               </li>
-              <li class="footer-menu__list-item">
+              <li class="footer-menu__item">
                 <a class="footer-menu__link animated-link" href="#">Новости</a>
               </li>
-              <li class="footer-menu__list-item">
+              <li class="footer-menu__item">
                 <a class="footer-menu__link animated-link" href="#">Партнеры</a>
               </li>
-              <li class="footer-menu__list-item">
+              <li class="footer-menu__item">
                 <a class="footer-menu__link animated-link" href="#">ЧаВо</a>
               </li>
-              <li class="footer-menu__list-item">
+              <li class="footer-menu__item">
                 <a class="footer-menu__link animated-link" href="#"
                   >Скачать приложение</a
                 >
               </li>
-              <li class="footer-menu__list-item">
+              <li class="footer-menu__item">
                 <a class="footer-menu__link animated-link" href="#">Блог</a>
               </li>
-              <li class="footer-menu__list-item">
+              <li class="footer-menu__item">
                 <a class="footer-menu__link animated-link" href="#"
                   >Что нового?</a
                 >
               </li>
-              <li class="footer-menu__list-item">
+              <li class="footer-menu__item">
                 <a class="footer-menu__link animated-link" href="#"
                   >Карта сайта</a
                 >
               </li>
             </ul>
           </nav>
-          <div class="contact">
-            <ul class="contact__info-list">
-              <li class="contact__info-item">
-                <a class="contact__info-link animated-link" href="#">
+          <address class="footer__address">
+            <ul class="contact">
+              <li class="contact__item">
+                <a class="contact__link animated-link" href="#">
                   <svg
-                    class="contact__info-icon"
+                    class="contact__icon"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -227,13 +260,10 @@
                   ул. Т.Г.Шевченко, 1
                 </a>
               </li>
-              <li class="contact__info-item">
-                <a
-                  class="contact__info-link animated-link"
-                  href="tel:38050112233"
-                >
+              <li class="contact__item">
+                <a class="contact__link animated-link" href="tel:38050112233">
                   <svg
-                    class="contact__info-icon"
+                    class="contact__icon"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -267,13 +297,13 @@
                   38050112233
                 </a>
               </li>
-              <li class="contact__info-item">
+              <li class="contact__item">
                 <a
-                  class="contact__info-link animated-link"
-                  href="support@sfood.com"
+                  class="contact__link animated-link"
+                  href="mailto:support@sfood.com"
                 >
                   <svg
-                    class="contact__info-icon"
+                    class="contact__icon"
                     width="22"
                     height="20"
                     viewBox="0 0 22 20"
@@ -301,14 +331,18 @@
                 </a>
               </li>
             </ul>
-            <ul class="contact__social-list">
-              <li class="contact__social-item">
+            <ul class="social">
+              <li class="social__item">
                 <a
-                  class="contact__social-link"
+                  class="social__link"
                   href="#"
                   aria-label="Перейти на страницу в Фейсбуке"
-                  ><svg
-                    class="contact__social-icon"
+                  target="_blank"
+                  noreferrer
+                  noopener
+                >
+                  <svg
+                    class="social__icon"
                     width="39"
                     height="39"
                     viewBox="0 0 39 39"
@@ -322,14 +356,17 @@
                     /></svg
                 ></a>
               </li>
-              <li class="contact__social-item">
+              <li class="social__item">
                 <a
-                  class="contact__social-link"
+                  class="social__link"
                   href="#"
                   aria-label="Перейти на страницу в Twitter"
+                  target="_blank"
+                  noreferrer
+                  noopener
                 >
                   <svg
-                    class="contact__social-icon"
+                    class="social__icon"
                     width="39"
                     height="39"
                     viewBox="0 0 39 39"
@@ -344,14 +381,17 @@
                   </svg>
                 </a>
               </li>
-              <li class="contact__social-item">
+              <li class="social__item">
                 <a
-                  class="contact__social-link"
+                  class="social__link"
                   href="#"
                   aria-label="Перейти на страницу в Инстаграме"
+                  target="_blank"
+                  noreferrer
+                  noopener
                 >
                   <svg
-                    class="contact__social-icon"
+                    class="social__icon"
                     width="39"
                     height="39"
                     viewBox="0 0 39 39"
@@ -362,11 +402,12 @@
                     <path
                       d="M17.5468 29.5263V19.8948H15V16.427H17.5468V13.465C17.5468 11.1374 19.0512 9 22.5176 9C23.9211 9 24.959 9.13455 24.959 9.13455L24.8772 12.3729C24.8772 12.3729 23.8188 12.3626 22.6638 12.3626C21.4137 12.3626 21.2134 12.9387 21.2134 13.8948V16.427H24.9765L24.8128 19.8948H21.2134V29.5263H17.5468Z"
                       fill="#31352B"
-                    /></svg
-                ></a>
+                    />
+                  </svg>
+                </a>
               </li>
             </ul>
-          </div>
+          </address>
         </div>
       </div>
       <div class="footer__bottom">© 2022 Simple Food</div>
