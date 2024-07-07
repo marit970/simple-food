@@ -6,5 +6,14 @@ $('.menu__link').on('click', function (event) {
   $(this).addClass('menu__link--active');
 });
 
+$(window).on('load scroll', function (e) {
+  if ($(window).scrollTop() > 0) {
+    $('.header').addClass('header--active');
+  } else {
+    // if going back to init position
+    $('.header').removeClass('header--active');
+  }
+});
+
 // eslint-disable-next-line no-undef
 mixitup('.popular-categories__nav-list');

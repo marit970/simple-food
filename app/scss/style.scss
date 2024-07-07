@@ -4,12 +4,24 @@
 @import 'globals';
 
 .header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
   &__logo {
     margin-right: auto;
   }
 
   &__menu {
     padding: $sectionMargin 0;
+  }
+
+  &--active {
+    background-color: $silver-100;
+    .header__menu {
+      padding: ($sectionMargin * 0.5) 0;
+    }
   }
 }
 
