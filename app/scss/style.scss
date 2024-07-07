@@ -288,7 +288,7 @@
 }
 
 .popular-categories {
-  padding: $sectionMargin 0;
+  margin-bottom: $sectionMargin;
   text-align: center;
 
   .animated-link {
@@ -499,7 +499,7 @@
   }
 
   &__content {
-    padding: 20px;
+    padding: 15px 20px;
     align-items: center;
   }
 
@@ -568,6 +568,7 @@
 
   &__title {
     text-align: center;
+    margin-bottom: 45px;
   }
 
   &__list {
@@ -578,7 +579,7 @@
 }
 
 .footer {
-  padding-top: 40px;
+  padding-top: $sectionMargin;
   text-align: center;
 
   &__top {
@@ -668,6 +669,7 @@
 
   &__title {
     text-align: center;
+    margin-bottom: 45px;
   }
 
   &__nav {
@@ -676,8 +678,33 @@
     align-items: center;
     gap: 23px;
   }
+
+  &__content {
+    margin-bottom: 42px;
+  }
 }
 
+.testimonial {
+  display: flex;
+  gap: 80px;
+  justify-content: space-evenly;
+
+  &__image {
+    border-radius: 50%;
+    margin-left: 90px;
+  }
+
+  &__quote {
+    margin: auto auto auto 0;
+  }
+}
+
+.quote__icon {
+  stroke: $darkBlue;
+  fill: none;
+  width: 21px;
+  height: 21px;
+}
 .slick-dots {
   display: flex;
   gap: 15px;
@@ -776,16 +803,6 @@
   transform: scale(-1);
 }
 
-.testimonial {
-  display: flex;
-  gap: 80px;
-  justify-content: center;
-
-  &__image {
-    border-radius: 50%;
-  }
-}
-
 .blockquote {
   @extend %rubik-400-italic;
   @extend %regular-text;
@@ -798,6 +815,7 @@
     color: $accent-900;
     line-height: 1.3;
     margin-bottom: 15px;
+    font-size: 20px;
   }
 
   &__role {
@@ -827,6 +845,7 @@
   &::after {
     background-image: url('../images/sprite.svg#icon-quote');
     right: -40px;
+    bottom: 0;
     transform: scaleX(-1);
   }
 }
