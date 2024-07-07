@@ -3,6 +3,7 @@
 @import 'vars';
 @import 'globals';
 @import 'libs';
+@import 'mixins';
 
 .header {
   position: fixed;
@@ -393,6 +394,7 @@
   }
 
   &__title {
+    @include line-clamp(3);
     @extend %rubik-400;
     font-size: 15px;
     line-height: 1.2;
@@ -493,6 +495,7 @@
   }
 
   &__title {
+    @include line-clamp(1);
     font-size: 24px;
     line-height: 1.3;
     margin-bottom: 20px;
@@ -692,6 +695,8 @@
   &__image {
     border-radius: 50%;
     margin-left: 90px;
+    max-width: 300px;
+    max-height: 300px;
   }
 
   &__quote {
@@ -804,6 +809,7 @@
 }
 
 .blockquote {
+  @include line-clamp(6);
   @extend %rubik-400-italic;
   @extend %regular-text;
   max-width: 570px;
