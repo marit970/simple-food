@@ -23,4 +23,4 @@ $('.testimonials__content').slick({
 });
 
 // eslint-disable-next-line no-undef
-mixitup('.popular-categories__nav-list');
+mixitup('.popular-categories__list');
