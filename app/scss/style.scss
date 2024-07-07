@@ -619,3 +619,45 @@
     align-items: flex-start;
   }
 }
+
+.app {
+  padding: $sectionMargin 15px;
+
+  &__wrapper {
+    display: flex;
+    gap: 60px;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__content {
+    flex: 1;
+    margin: auto 0;
+  }
+
+  &__description {
+    @extend %regular-text;
+    margin-bottom: 30px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__button-img {
+    width: 120px;
+    height: 40px;
+  }
+
+  &__image {
+    background-image: url('../images/app.jpg');
+    @extend %background-image;
+    width: 570px;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+  }
+}
