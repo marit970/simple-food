@@ -15,5 +15,12 @@ $(window).on('load scroll', function (e) {
   }
 });
 
+$('.testimonials__content').slick({
+  dots: true,
+  arrows: true,
+  appendDots: $('.testimonials__dots'),
+  appendArrows: $('.testimonials__nav'),
+});
+
 // eslint-disable-next-line no-undef
 mixitup('.popular-categories__nav-list');
