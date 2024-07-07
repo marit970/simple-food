@@ -105,17 +105,15 @@ button {
   &:hover {
     background-color: #ff7a50;
 
-    & ellipse,
-    path {
+    & svg {
       stroke: #fff;
     }
   }
   &:focus {
     box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
     background-color: rgba(255, 122, 80, 0.1);
-    & ellipse,
-    & path {
-      stroke: #000;
+    & svg {
+      stroke: $darkBlue;
     }
   }
   &:active {

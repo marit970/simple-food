@@ -83,9 +83,13 @@
   gap: 12px;
 
   &__icon {
+    width: 21px;
+    height: 21px;
     top: 50%;
     transform: translateY(-50%);
     position: relative;
+    stroke: $darkBlue;
+    fill: none;
   }
 
   &__button {
@@ -124,6 +128,9 @@
       position: absolute;
       top: 8px;
       right: 5px;
+      transition:
+        color 0.5s ease,
+        background-color 0.5s ease;
     }
   }
 }
@@ -162,21 +169,22 @@
 
   &__btn {
     font-size: 14px;
-
-    & path {
-      transition: fill 0.5s ease;
-    }
     &:hover,
-    &:focus {
-      .subscribe-form__btn-icon path {
+    &:focus,
+    &:active {
+      .subscribe-form__icon {
         fill: $accent-900;
       }
     }
   }
 
   &__icon {
+    width: 15px;
+    height: 15px;
     transform: translateY(10%);
     margin-right: 15px;
+    fill: white;
+    transition: fill 0.5s ease;
   }
 }
 
@@ -193,17 +201,12 @@
   &__item {
     margin-bottom: 15px;
 
-    & .contact__info-link {
-      & path {
-        transition: stroke 0.5s ease;
-      }
-      &:hover path {
+    & .contact__link {
+      &:hover svg {
         stroke: $accent-900;
       }
-      &:focus path {
-        stroke: $dark;
-      }
-      &:active path {
+      &:focus svg,
+      &:active svg {
         stroke: $dark;
       }
     }
@@ -212,6 +215,9 @@
   &__icon {
     width: 24px;
     height: 24px;
+    fill: none;
+    stroke: $dark;
+    transition: stroke 0.5s ease;
   }
 }
 
@@ -225,47 +231,44 @@
   }
 
   &__icon {
-    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+    fill: $dark;
     box-shadow: 0 0 0 2px transparent;
+    transform: translateY(50%);
   }
 
   &__link {
-    & circle,
-    & path,
+    width: 39px;
+    height: 39px;
+    background-color: $silver-200;
+    display: block;
+    border-radius: 50%;
+    transition:
+      background-color 0.5s ease,
+      box-shadow 0.5s ease;
     & svg {
-      transition:
-        fill 0.5s ease,
-        box-shadow 0.5s ease;
+      transition: fill 0.5s ease;
     }
 
     &:hover {
-      & circle {
-        fill: #ff7a50;
-      }
-      & path {
-        fill: #fff;
+      background-color: #ff7a50;
+      .social__icon {
+        fill: #fff2ed;
       }
     }
     &:focus {
-      & circle {
-        fill: #fff2ed;
-      }
-      & path {
+      background-color: #fff2ed;
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      .social__icon {
         fill: $dark;
-      }
-      & svg {
-        box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
       }
     }
     &:active {
-      & circle {
-        fill: #fff2ed;
-      }
-      & path {
+      background-color: #fff2ed;
+      box-shadow: 0 0 0 2px transparent;
+      .social__icon {
         fill: $accent-900;
-      }
-      & svg {
-        box-shadow: 0 0 0 2px transparent;
       }
     }
   }
@@ -285,7 +288,7 @@
     background-color: $accent-900;
     color: #fff;
 
-    & path {
+    & svg {
       fill: #fff;
     }
   }
@@ -295,6 +298,7 @@
     gap: 20px;
     margin-bottom: 45px;
   }
+
   &__nav-button {
     font-size: 20px;
     padding: 13px 32px;
@@ -308,15 +312,11 @@
       color 0.5s ease,
       background-color 0.5s ease;
 
-    & path {
-      transition: fill 0.5s ease;
-    }
-
     &:hover {
       box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
       background-color: rgba(255, 122, 80, 0.1);
       color: $accent-900;
-      & path {
+      & svg {
         fill: $accent-900;
       }
     }
@@ -333,6 +333,13 @@
       max-width: 44px;
       max-height: 44px;
     }
+  }
+
+  &__nav-icon {
+    width: 44px;
+    height: 44px;
+    fill: $darkBlue;
+    transition: fill 0.5s ease;
   }
 
   &__list {
@@ -395,7 +402,7 @@
   min-height: 585px;
 
   .title {
-    margin-bottom: $sectionMargin/2;
+    margin-bottom: 30px;
   }
   &__inner {
     display: flex;
@@ -488,12 +495,12 @@
     justify-content: space-between;
   }
 
-  &__icon {
+  &__icon-time {
     display: flex;
     align-items: center;
   }
 
-  &__icon::before {
+  &__icon-time::before {
     content: '';
     width: 22px;
     height: 22px;
@@ -501,6 +508,13 @@
     @extend %background-image;
     display: inline-block;
     margin-right: 10px;
+  }
+
+  &__button-icon {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    transition: fill 0.5s ease;
   }
 
   &__button {
@@ -514,26 +528,22 @@
       box-shadow 0.5s ease,
       background-color 0.5s ease;
 
-    & path {
-      transition: fill 0.5s ease;
-    }
-
     &:hover {
       padding: 4px 4px 4px 50px;
-      & path {
+      & svg {
         fill: $accent-900;
       }
     }
 
     &:focus {
       padding: 4px 28px;
-      & path {
+      & svg {
         fill: $accent-900;
       }
     }
 
     &:active {
-      & path {
+      & svg {
         fill: $accent-900;
       }
     }
