@@ -823,6 +823,8 @@
     @extend %rubik-400;
     font-size: 14px;
     line-height: 130%;
+    display: block;
+    margin-top: 15px;
   }
 
   &::before,
