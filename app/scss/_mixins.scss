@@ -38,3 +38,65 @@
   }
   transition: $transitions;
 }
+
+@mixin burger {
+  width: 44px;
+  height: 44px; //указываем высоту линий
+  position: relative;
+  color: $burgerColor; //указываем цвет линий
+  &__line {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    width: $burgerWidth;
+    height: $burgerLineHeight; //указываем расстояние между линиями
+    background-color: currentColor;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 30px;
+    height: $burgerLineHeight;
+    background-color: currentColor;
+    transform: translateX(-50%);
+    transition:
+      transform 0.3s ease-in-out,
+      top 0.3s ease-in-out;
+  }
+
+  &::before {
+    top: 25%;
+  }
+
+  &::after {
+    top: calc(75% - $burgerLineHeight);
+  }
+
+  &--active {
+    .burger__line {
+      transform: scale(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      top: 50%;
+      transition:
+        transform 0.3s ease-in-out,
+        top 0.3s ease-in-out;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      top: 50%;
+      transition:
+        transform 0.3s ease-in-out,
+        top 0.3s ease-in-out;
+    }
+  }
+}

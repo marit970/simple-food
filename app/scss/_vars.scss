@@ -10,14 +10,21 @@ $black: #000;
 $darkBlue: #363853;
 $dark: #31352b;
 
+$sectionPadding: 60px;
+$sectionPaddingTablet: 40px;
+$sectionPaddingPhone: 20px;
+
+$burgerWidth: 30px; //ширина линий - 40px
+$burgerHeight: 25px; //высота линий - 25px
+$burgerLineHeight: 2px; //расстояние между ними - 2px
+$burgerColor: #000;
+
 $breakpoints: (
   'phone': 560px,
   'tablet': 768px,
   'tablet-2': 992px,
-  'desktop': 1230px,
+  'desktop': 1200px,
 );
-
-$sectionMargin: 60px;
 
 %rubik-300 {
   font-family: 'Rubik', sans-serif;
