@@ -19,12 +19,14 @@ button {
   font-size: 18px;
   color: $darkBlue;
   border-radius: 5px;
-  box-shadow: 0 0 0 2px transparent;
+}
+
+img {
+  object-fit: cover;
 }
 
 .main {
   flex-grow: 1;
-  margin-top: 164px;
 }
 
 .title {
@@ -35,20 +37,13 @@ button {
   margin-bottom: $sectionMargin;
 }
 
-.text {
-  @extend %rubik-400;
-  font-size: 16px;
-}
-
 .primary-button {
   background-color: $accent-900;
-  color: #fff;
-  font-size: 18px;
+  color: $white;
   line-height: 1.3;
   letter-spacing: 0.03em;
   border-radius: 6px;
   padding: 12px 32px;
-  box-shadow: 0 0 0 2px transparent;
   margin: 2px 0 0 2px;
   transition:
     box-shadow 0.5s ease,
@@ -58,19 +53,21 @@ button {
 
   &:hover {
     box-shadow:
-      0 0 0 2px rgba(255, 104, 56, 0.7),
-      0 5px 12px 0 rgba(255, 104, 56, 0.2);
-    background-color: rgba(255, 255, 255, 0.1);
+      0 0 0 2px rgba($accent-900, 0.7),
+      0 5px 12px 0 rgba($accent-900, 0.2);
+    background-color: rgba($white, 0.1);
     color: $accent-900;
   }
+
   &:focus {
-    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-    background-color: rgba(255, 122, 80, 0.1);
+    box-shadow: 0 0 0 2px rgba($accent-900, 0.7);
+    background-color: rgba($accent-800, 0.1);
     color: $accent-900;
   }
+
   &:active {
     box-shadow: 0 0 0 2px transparent;
-    background-color: rgba(255, 122, 80, 0.1);
+    background-color: rgba($accent-800, 0.1);
     color: $accent-900;
   }
 }
@@ -84,14 +81,15 @@ button {
   &:hover {
     color: $accent-900;
   }
+
   &:focus {
-    // color: $dark;
-    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    box-shadow: 0 0 0 2px rgba($accent-900, 0.7);
   }
+
   &:active {
     color: $dark;
     box-shadow: 0 0 0 2px transparent;
-    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    text-shadow: 2px 2px 5px rgba($dark, 0.5);
   }
 }
 
@@ -104,22 +102,22 @@ button {
     stroke 0.5s ease;
 
   &:hover {
-    background-color: #ff7a50;
+    background-color: $accent-800;
 
     & svg {
-      stroke: #fff;
+      stroke: $white;
     }
   }
   &:focus {
-    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-    background-color: rgba(255, 122, 80, 0.1);
+    box-shadow: 0 0 0 2px rgba($accent-900, 0.7);
+    background-color: rgba($accent-800, 0.1);
     & svg {
       stroke: $darkBlue;
     }
   }
   &:active {
     box-shadow: 0 0 0 2px transparent;
-    background-color: #fff2ed;
+    background-color: $rose-white;
   }
 }
 
@@ -146,7 +144,6 @@ button {
   height: 39px;
   border-radius: 5px;
   display: block;
-  box-shadow: 0 0 0 2px transparent;
   transition:
     box-shadow 0.5s ease,
     opacity 0.5s;
@@ -154,10 +151,12 @@ button {
   &:hover {
     opacity: 0.8;
   }
+
   &:focus {
     opacity: 1;
-    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    box-shadow: 0 0 0 2px rgba($accent-900, 0.7);
   }
+
   &:active {
     box-shadow: 0 0 0 2px transparent;
     opacity: 0.5;

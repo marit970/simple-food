@@ -6,7 +6,7 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href=".images/favicon/apple-touch-icon.png"
+      href="./images/favicon/apple-touch-icon.png"
     />
     <link
       rel="icon"
@@ -27,50 +27,52 @@
 
   <body>
     <header class="header">
-      <div class="container">
-        <nav class="menu header__menu">
-          <a class="logo header__logo" href="#">
-            <img
-              class="logo__img"
-              src="./images/logo.svg"
-              alt="Логотип сайта"
-              width="200"
-              height="39"
-            />
-          </a>
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link animated-link menu__link--active" href="#"
-                >Главная</a
-              >
-            </li>
-            <li class="menu__item">
-              <a class="menu__link animated-link" href="#">Блюда</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link animated-link" href="#">Контакты</a>
-            </li>
-          </ul>
-          <ul class="actions-list">
-            <li class="actions-list__item">
-              <a class="actions-list__button animated-icon" href="#">
-                <svg class="actions-list__icon">
-                  <use xlink:href="images/sprite.svg#icon-search"></use>
-                </svg>
-                <span class="sr-only">Поиск</span>
-              </a>
-            </li>
-            <li class="actions-list__item">
-              <a class="actions-list__button animated-icon" href="#">
-                <svg class="actions-list__icon">
-                  <use xlink:href="images/sprite.svg#icon-cart"></use>
-                </svg>
-                <div class="actions-list__button-counter">4</div>
-                <span class="sr-only">Корзина товаров</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+      <div class="header__wrapper">
+        <div class="container">
+          <nav class="menu header__menu">
+            <a class="logo header__logo" href="#">
+              <img
+                class="logo__img"
+                src="./images/logo.svg"
+                alt="Логотип сайта"
+                width="200"
+                height="39"
+              />
+            </a>
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link animated-link menu__link--active" href="#"
+                  >Главная</a
+                >
+              </li>
+              <li class="menu__item">
+                <a class="menu__link animated-link" href="#">Блюда</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link animated-link" href="#">Контакты</a>
+              </li>
+            </ul>
+            <ul class="actions-list">
+              <li class="actions-list__item">
+                <a class="actions-list__button animated-icon" href="#">
+                  <svg class="actions-list__icon">
+                    <use xlink:href="images/sprite.svg#icon-search"></use>
+                  </svg>
+                  <span class="sr-only">Поиск</span>
+                </a>
+              </li>
+              <li class="actions-list__item">
+                <a class="actions-list__button animated-icon" href="#">
+                  <svg class="actions-list__icon">
+                    <use xlink:href="images/sprite.svg#icon-cart"></use>
+                  </svg>
+                  <div class="actions-list__button-counter">4</div>
+                  <span class="sr-only">Корзина товаров</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -96,6 +98,7 @@
             <div
               class="hero__image"
               style="background-image: url('./images/scooter-guy.png')"
+              aria-label="Мультяшный персонаж на скутере"
             ></div>
           </div>
         </div>
@@ -388,7 +391,11 @@
               </article>
             </li>
           </ul>
-          <a class="animated-link text-underline" href="#">Показать еще</a>
+          <a
+            class="popular-categories__animated-link animated-link text-underline"
+            href="#"
+            >Показать еще</a
+          >
         </div>
       </section>
 
@@ -398,6 +405,7 @@
             <div
               class="features__image"
               style="background-image: url('../images/food-delivery.png')"
+              aria-label="Мультяшный персонаж доставляет посылку."
             ></div>
             <div class="features__content">
               <h2 class="title">
@@ -447,7 +455,11 @@
                       <time datetime="11:00">11:00</time> -
                       <time datetime="22:00">22:00</time>
                     </span>
-                    <a class="primary-button restaurant-card__button" href="#">
+                    <a
+                      class="primary-button restaurant-card__button"
+                      href="#"
+                      aria-label="Подробнее о ресторане"
+                    >
                       <svg class="restaurant-card__button-icon">
                         <use xlink:href="images/sprite.svg#icon-arrow"></use>
                       </svg>
@@ -472,7 +484,11 @@
                       <time datetime="12:00">12:00</time> -
                       <time datetime="21:00">21:00</time>
                     </span>
-                    <a class="primary-button restaurant-card__button" href="#">
+                    <a
+                      class="primary-button restaurant-card__button"
+                      href="#"
+                      aria-label="Подробнее о ресторане"
+                    >
                       <svg class="restaurant-card__button-icon">
                         <use xlink:href="images/sprite.svg#icon-arrow"></use>
                       </svg>
@@ -497,7 +513,11 @@
                       <time datetime="11:00">11:00</time> -
                       <time datetime="22:00">22:00</time>
                     </span>
-                    <a class="primary-button restaurant-card__button" href="#">
+                    <a
+                      class="primary-button restaurant-card__button"
+                      href="#"
+                      aria-label="Подробнее о ресторане"
+                    >
                       <svg class="restaurant-card__button-icon">
                         <use xlink:href="images/sprite.svg#icon-arrow"></use>
                       </svg>
@@ -522,7 +542,11 @@
                       <time datetime="06:00">06:00</time> -
                       <time datetime="23:00">23:00</time>
                     </span>
-                    <a class="primary-button restaurant-card__button" href="#">
+                    <a
+                      class="primary-button restaurant-card__button"
+                      href="#"
+                      aria-label="Подробнее о ресторане"
+                    >
                       <svg class="restaurant-card__button-icon">
                         <use xlink:href="images/sprite.svg#icon-arrow"></use>
                       </svg>
@@ -547,7 +571,11 @@
                       <time datetime="06:00">06:00</time> -
                       <time datetime="23:30">23:30</time>
                     </span>
-                    <a class="primary-button restaurant-card__button" href="#">
+                    <a
+                      class="primary-button restaurant-card__button"
+                      href="#"
+                      aria-label="Подробнее о ресторане"
+                    >
                       <svg class="restaurant-card__button-icon">
                         <use xlink:href="images/sprite.svg#icon-arrow"></use>
                       </svg>
@@ -572,7 +600,11 @@
                       <time datetime="09:00">09:00</time> -
                       <time datetime="21:00">21:00</time>
                     </span>
-                    <a class="primary-button restaurant-card__button" href="#">
+                    <a
+                      class="primary-button restaurant-card__button"
+                      href="#"
+                      aria-label="Подробнее о ресторане"
+                    >
                       <svg class="restaurant-card__button-icon">
                         <use xlink:href="images/sprite.svg#icon-arrow"></use>
                       </svg>
@@ -588,96 +620,112 @@
       <section class="testimonials">
         <div class="container">
           <h2 class="title testimonials__title">Отзывы клиентов</h2>
-          <div class="testimonials__content">
-            <div class="testimonials__wrapper">
+          <ul class="testimonials__content">
+            <li class="testimonials__wrapper">
               <div class="testimonial">
                 <img
                   class="testimonial__image"
                   src="./images/client.jpg"
-                  alt="Дарья"
+                  alt="Дарья, клиент и автор цитаты"
+                  width="300"
+                  height="300"
                 />
                 <figure class="quote testimonial__quote">
-                  <blockquote class="blockquote">
+                  <testimonial__blockquote class="testimonial__blockquote">
                     SimpleFood - одна из лучших служб доставки продуктов из
                     ресторанов в городе. Очень удобный сайт и приложение. Их
                     доставщики очень вежливы и пунктуальны. Компания часто
                     проводит акции и дарит скидки на доставку - однозначно
                     рекомендую!
-                  </blockquote>
-                  <figcaption class="blockquote__author">
+                  </testimonial__blockquote>
+                  <figcaption class="testimonial__blockquote-author">
                     Дарья
-                    <span class="blockquote__role">Ценитель вкусной еды</span>
+                    <span class="testimonial__blockquote-role"
+                      >Ценитель вкусной еды</span
+                    >
                   </figcaption>
                 </figure>
               </div>
-            </div>
+            </li>
             <div class="testimonials__wrapper">
               <div class="testimonial">
                 <img
                   class="testimonial__image"
                   src="./images/client.jpg"
-                  alt="Дарья"
+                  alt="Дарья, клиент и автор цитаты"
+                  width="300"
+                  height="300"
                 />
-                <figure class="quote testimonial__quote">
-                  <blockquote class="blockquote">
+                <figure class="testimonial__quote">
+                  <testimonial__blockquote class="testimonial__blockquote">
                     SimpleFood - одна из лучших служб доставки продуктов из
                     ресторанов в городе. Очень удобный сайт и приложение. Их
                     доставщики очень вежливы и пунктуальны. Компания часто
                     проводит акции и дарит скидки на доставку - однозначно
                     рекомендую!
-                  </blockquote>
-                  <figcaption class="blockquote__author">
+                  </testimonial__blockquote>
+                  <figcaption class="testimonial__blockquote-author">
                     Дарья
-                    <span class="blockquote__role">Ценитель вкусной еды</span>
+                    <span class="testimonial__blockquote-role"
+                      >Ценитель вкусной еды</span
+                    >
                   </figcaption>
                 </figure>
               </div>
             </div>
-            <div class="testimonials__wrapper">
+            <li class="testimonials__wrapper">
               <div class="testimonial">
                 <img
                   class="testimonial__image"
                   src="./images/client.jpg"
-                  alt="Дарья"
+                  alt="Дарья, клиент и автор цитаты"
+                  width="300"
+                  height="300"
                 />
-                <figure class="quote testimonial__quote">
-                  <blockquote class="blockquote">
+                <figure class="testimonial__quote">
+                  <testimonial__blockquote class="testimonial__blockquote">
                     SimpleFood - одна из лучших служб доставки продуктов из
                     ресторанов в городе. Очень удобный сайт и приложение. Их
                     доставщики очень вежливы и пунктуальны. Компания часто
                     проводит акции и дарит скидки на доставку - однозначно
                     рекомендую!
-                  </blockquote>
-                  <figcaption class="blockquote__author">
+                  </testimonial__blockquote>
+                  <figcaption class="testimonial__blockquote-author">
                     Дарья
-                    <span class="blockquote__role">Ценитель вкусной еды</span>
+                    <span class="testimonial__blockquote-role"
+                      >Ценитель вкусной еды</span
+                    >
                   </figcaption>
                 </figure>
               </div>
-            </div>
-            <div class="testimonials__wrapper">
+            </li>
+            <li class="testimonials__wrapper">
               <div class="testimonial">
                 <img
                   class="testimonial__image"
                   src="./images/client.jpg"
-                  alt="Дарья"
+                  alt="Дарья, клиент и автор цитаты"
+                  width="300"
+                  height="300"
                 />
                 <figure class="quote testimonial__quote">
-                  <blockquote class="blockquote">
+                  <testimonial__blockquote class="testimonial__blockquote">
                     SimpleFood - одна из лучших служб доставки продуктов из
                     ресторанов в городе. Очень удобный сайт и приложение. Их
                     доставщики очень вежливы и пунктуальны. Компания часто
                     проводит акции и дарит скидки на доставку - однозначно
                     рекомендую!
-                  </blockquote>
-                  <figcaption class="blockquote__author">
+                  </testimonial__blockquote>
+                  <figcaption class="testimonial__blockquote-author">
                     Дарья
-                    <span class="blockquote__role">Ценитель вкусной еды</span>
+                    <span class="testimonial__blockquote-role"
+                      >Ценитель вкусной еды</span
+                    >
                   </figcaption>
                 </figure>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
           <div class="testimonials__nav">
             <div class="testimonials__dots"></div>
           </div>
@@ -688,7 +736,7 @@
         <div class="container">
           <div class="app__wrapper">
             <div class="app__content">
-              <h1 class="title app__title">Скачайте мобильное приложение</h1>
+              <h2 class="title app__title">Скачайте мобильное приложение</h2>
               <p class="app__description">
                 Рестораны, которые вы любите – в ваших руках. Устанавливайте
                 приложение и заказывайте еду в любом удобном месте.
@@ -698,10 +746,12 @@
                   class="app__button app__button--app-store"
                   href="#"
                   aria-label="Download on the App Store"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <img
                     class="app__button-image"
-                    src="./images/app-store.png"
+                    src="./images/app-store.svg"
                     alt="Загрузить из App Store"
                   />
                 </a>
@@ -709,16 +759,22 @@
                   class="app__button app__button--google-play"
                   href="#"
                   aria-label="Get it on Google Play"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <img
                     class="app__button-image"
-                    src="./images/google-store.png"
+                    src="./images/google-store.svg"
                     alt="Загрузить из Google Play"
                   />
                 </a>
               </div>
             </div>
-            <div class="app__image"></div>
+            <div
+              class="app__image"
+              style="background-image: url('./images/app.jpg')"
+              aria-label="Скриншот мобильного приложения"
+            ></div>
           </div>
         </div>
       </section>
@@ -763,25 +819,7 @@
                 >
               </li>
               <li class="footer-menu__item">
-                <a class="footer-menu__link animated-link" href="#">Продукты</a>
-              </li>
-              <li class="footer-menu__item">
-                <a class="footer-menu__link animated-link" href="#">Блюда</a>
-              </li>
-              <li class="footer-menu__item">
-                <a class="footer-menu__link animated-link" href="#">Меню</a>
-              </li>
-              <li class="footer-menu__item">
                 <a class="footer-menu__link animated-link" href="#">О нас</a>
-              </li>
-              <li class="footer-menu__item">
-                <a class="footer-menu__link animated-link" href="#">Новости</a>
-              </li>
-              <li class="footer-menu__item">
-                <a class="footer-menu__link animated-link" href="#">Партнеры</a>
-              </li>
-              <li class="footer-menu__item">
-                <a class="footer-menu__link animated-link" href="#">ЧаВо</a>
               </li>
               <li class="footer-menu__item">
                 <a class="footer-menu__link animated-link" href="#"
@@ -789,12 +827,30 @@
                 >
               </li>
               <li class="footer-menu__item">
+                <a class="footer-menu__link animated-link" href="#">Продукты</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link animated-link" href="#">Новости</a>
+              </li>
+              <li class="footer-menu__item">
                 <a class="footer-menu__link animated-link" href="#">Блог</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link animated-link" href="#">Блюда</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link animated-link" href="#">Партнеры</a>
               </li>
               <li class="footer-menu__item">
                 <a class="footer-menu__link animated-link" href="#"
                   >Что нового?</a
                 >
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link animated-link" href="#">Меню</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link animated-link" href="#">ЧаВо</a>
               </li>
               <li class="footer-menu__item">
                 <a class="footer-menu__link animated-link" href="#"

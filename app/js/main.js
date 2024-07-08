@@ -8,10 +8,10 @@ $('.menu__link').on('click', function (event) {
 
 $(window).on('load scroll', function (e) {
   if ($(window).scrollTop() > 0) {
-    $('.header').addClass('header--active');
+    $('.header__wrapper').addClass('header--active');
   } else {
     // if going back to init position
-    $('.header').removeClass('header--active');
+    $('.header__wrapper').removeClass('header--active');
   }
 });
 
@@ -20,6 +20,7 @@ $('.testimonials__content').slick({
   arrows: true,
   appendDots: $('.testimonials__dots'),
   appendArrows: $('.testimonials__nav'),
+  infinite: false,
 });
 
 // eslint-disable-next-line no-undef

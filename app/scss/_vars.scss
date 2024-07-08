@@ -1,9 +1,22 @@
 $accent-900: #ff6838;
+$accent-800: #ff7a50;
+$orange-light: #ffae94;
+$rose-white: #fff2ed;
 $silver-200: #ececec;
 $grey: #c2c2c2;
+$white: #fff;
+$silver-100: #f9faff;
+$black: #000;
 $darkBlue: #363853;
 $dark: #31352b;
-$silver-100: #f9faff;
+
+$breakpoints: (
+  'phone': 560px,
+  'tablet': 768px,
+  'tablet-2': 992px,
+  'desktop': 1230px,
+);
+
 $sectionMargin: 60px;
 
 %rubik-300 {
