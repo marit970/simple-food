@@ -13,6 +13,16 @@ const mobileMenu = document.querySelector('.mobile');
 burger.addEventListener('click', () => {
   burger.classList.toggle('burger--active');
   mobileMenu.classList.toggle('mobile--active');
+  $('body').toggleClass('lock');
+});
+
+/* eslint-disable no-undef */
+$('.mobile__link').on('click', function (event) {
+  event.preventDefault();
+
+  $(this).removeClass('mebile__link--active');
+  mobileMenu.classList.remove('mobile--active');
+  $('body').removeClass('lock');
 });
 
 // window scroll

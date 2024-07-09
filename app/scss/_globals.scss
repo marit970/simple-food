@@ -11,6 +11,10 @@ body {
   flex-direction: column;
   background-color: $silver-100;
   color: $dark;
+
+  &.lock {
+    overflow-y: hidden;
+  }
 }
 
 a,
