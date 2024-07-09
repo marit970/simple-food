@@ -19,10 +19,6 @@ button {
   font-size: 18px;
   color: $darkBlue;
   border-radius: 5px;
-
-  @include mq('phone') {
-    font-size: 16px;
-  }
 }
 
 img {
