@@ -33,6 +33,16 @@ img {
   flex-grow: 1;
 }
 
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($black, 0.5);
+  display: none;
+  &--active {
+    display: block;
+  }
+}
+
 .title {
   @extend %rubik-500;
   font-size: 36px;

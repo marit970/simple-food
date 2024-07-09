@@ -114,6 +114,16 @@
 
 .burger {
   @include burger;
+  display: none;
+  @include mq('phone') {
+    display: block;
+  }
+
+  &--active {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
 }
 
 .hero {
