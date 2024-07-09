@@ -24,6 +24,12 @@ burgerActive.addEventListener('click', () => {
   $('body').removeClass('lock');
 });
 
+overlay.addEventListener('click', () => {
+  mobileMenu.classList.remove('mobile--active');
+  overlay.classList.remove('overlay--active');
+  $('body').removeClass('lock');
+});
+
 /* eslint-disable no-undef */
 $('.mobile__link').on('click', function (event) {
   event.preventDefault();
