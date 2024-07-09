@@ -279,7 +279,7 @@
 
   &__title {
     @include mq('phone') {
-      margin-bottom: $sectionPaddingPhone;
+      margin-bottom: 25px;
     }
   }
 
@@ -551,10 +551,52 @@
     gap: 30px;
 
     @include mq('phone') {
-      grid-auto-flow: column;
-      overflow-x: auto;
+      grid-template-columns: unset;
+      gap: unset;
     }
   }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
+}
+
+.slick-dots {
+  display: flex;
+  gap: 15px;
+
+  & button {
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    background-color: $grey;
+    border-radius: 50%;
+    cursor: pointer;
+    @include tr(background-color, border-color, box-shadow);
+
+    &:focus {
+      box-shadow: 0 0 0 2px $accent-900;
+      border-color: transparent;
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 2px rgba($accent-900, 0.7);
+      border-color: $accent-900;
+    }
+
+    &:active {
+      background-color: $orange-light;
+      border-color: transparent;
+      box-shadow: 0 0 0 2px transparent;
+    }
+  }
+}
+
+.slick-active button {
+  background-color: $accent-900;
 }
 
 .restaurant-card {
@@ -564,10 +606,6 @@
   position: relative;
   border-radius: 10px;
   transition: box-shadow 0.5s ease;
-
-  @include mq('phone') {
-    max-width: 340px;
-  }
 
   &:hover {
     box-shadow: 0 3px 15px 0 rgba($accent-900, 0.5);
@@ -579,7 +617,7 @@
     border-radius: 10px 10px 0 0;
 
     @include mq('phone') {
-      max-width: 340px;
+      max-width: 345px;
       height: 300px;
     }
   }
@@ -669,41 +707,6 @@
   &__nav {
     @extend %display-flex;
     gap: 23px;
-
-    .slick-dots {
-      display: flex;
-      gap: 15px;
-
-      & button {
-        font-size: 0;
-        width: 15px;
-        height: 15px;
-        background-color: $grey;
-        border-radius: 50%;
-        cursor: pointer;
-        @include tr(background-color, border-color, box-shadow);
-
-        &:focus {
-          box-shadow: 0 0 0 2px $accent-900;
-          border-color: transparent;
-        }
-
-        &:hover {
-          box-shadow: 0 0 0 2px rgba($accent-900, 0.7);
-          border-color: $accent-900;
-        }
-
-        &:active {
-          background-color: $orange-light;
-          border-color: transparent;
-          box-shadow: 0 0 0 2px transparent;
-        }
-      }
-    }
-
-    .slick-active button {
-      background-color: $accent-900;
-    }
 
     .slick-prev,
     .slick-next {

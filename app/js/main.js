@@ -23,11 +23,12 @@ $('.testimonials__content').slick({
   infinite: false,
 });
 
-// start mobile slider for popular-categories
-if (window.matchMedia('(min-width: 400px)').matches) {
-  /* the viewport is at least 400 pixels wide */
-} else {
-  /* the viewport is less than 400 pixels wide */
+// mobile slider for popular-categories
+if (window.matchMedia('(max-width: 576px)').matches) {
+  $('.restaurants__list').slick({
+    dots: true,
+    arrows: false,
+  });
 }
 
 //DOMContentLoaded означает, когда наш документ будет готов к работе, тогда начнут работать наши скрипты
