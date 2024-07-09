@@ -21,6 +21,15 @@ $('.testimonials__content').slick({
   appendDots: $('.testimonials__dots'),
   appendArrows: $('.testimonials__nav'),
   infinite: false,
+  responsive: [
+    {
+      breakpoint: 576,
+      settings: {
+        dots: false,
+        appendArrows: $('.testimonials__content'),
+      },
+    },
+  ],
 });
 
 // mobile slider for popular-categories
