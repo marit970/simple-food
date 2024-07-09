@@ -6,7 +6,17 @@ $('.menu__link').on('click', function (event) {
   $(this).addClass('menu__link--active');
 });
 
-$(window).on('load scroll', function (e) {
+// mobile Menu
+const burger = document.querySelector('.burger');
+const mobileMenu = document.querySelector('.mobile');
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('burger--active');
+  mobileMenu.classList.toggle('mobile--active');
+});
+
+// window scroll
+$(window).on('load scroll', function () {
   if ($(window).scrollTop() > 0) {
     $('.header__wrapper').addClass('header--active');
   } else {
@@ -15,6 +25,7 @@ $(window).on('load scroll', function (e) {
   }
 });
 
+// testimonials slider
 $('.testimonials__content').slick({
   dots: true,
   arrows: true,
@@ -39,18 +50,6 @@ if (window.matchMedia('(max-width: 576px)').matches) {
     arrows: false,
   });
 }
-
-//DOMContentLoaded означает, когда наш документ будет готов к работе, тогда начнут работать наши скрипты
-
-//Mobile Menu
-const burger = document.querySelector('.burger'); //находим наш бургер по селектору класса
-
-burger.addEventListener('click', () => {
-  //Добавляем событие "клик" на бургер
-
-  burger.classList.toggle('burger--active'); //при клике на бургер у нас будет либо добавлятся класс, либо удаляется.
-  //ВАЖНО! Мы уже работаем с данным классом, поэтому тут "." не ставим, иначе в атрибут class значение добавится с "." и работать не будет.
-});
 
 // eslint-disable-next-line no-undef
 mixitup('.popular-categories__list');
