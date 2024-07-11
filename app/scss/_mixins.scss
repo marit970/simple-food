@@ -41,16 +41,16 @@
 
 @mixin burger {
   width: 44px;
-  height: 44px; //указываем высоту линий
+  height: 44px;
   position: relative;
-  color: $burgerColor; //указываем цвет линий
+  color: $darkBlue;
   &__line {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translateX(-50%);
     width: $burgerWidth;
-    height: $burgerLineHeight; //указываем расстояние между линиями
+    height: $burgerLineHeight;
     background-color: currentColor;
     transition: transform 0.3s ease-in-out;
   }
