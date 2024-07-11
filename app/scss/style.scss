@@ -312,6 +312,7 @@
 .actions-list {
   display: flex;
   gap: 12px;
+  padding-top: 2px;
 
   @include mq('tablet') {
     margin-left: auto;
@@ -587,7 +588,7 @@
     justify-content: center;
 
     @include mq('desktop') {
-      gap: 30px;
+      gap: 20px;
     }
 
     @include mq('tablet-2') {
@@ -717,7 +718,7 @@
     gap: 30px;
 
     @include mq('desktop') {
-      gap: 15px;
+      gap: 20px;
     }
 
     @include mq('tablet-2') {
@@ -816,6 +817,10 @@
       max-width: 290px;
     }
 
+    @include mq('tablet') {
+      max-width: 250px;
+    }
+
     @include mq('phone') {
       max-width: 345px;
       height: 300px;
@@ -833,6 +838,10 @@
   &__content {
     padding: 15px 20px;
     align-items: center;
+
+    @include mq('tablet') {
+      padding: 10px 10px;
+    }
   }
 
   &__inner {
