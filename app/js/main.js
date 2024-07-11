@@ -76,5 +76,19 @@ if (window.matchMedia('(max-width: 576px)').matches) {
   });
 }
 
+$('.menu__link, .mobile__link, .logo').on('click', function (event) {
+  event.preventDefault();
+
+  const id = $(this).attr('href');
+  const top = $(id).offset().top;
+
+  $('body, html').animate(
+    {
+      scrollTop: top,
+    },
+    1000,
+  );
+});
+
 // eslint-disable-next-line no-undef
 mixitup('.popular-categories__list');

@@ -25,7 +25,7 @@
     <title>SimpleFood сервис доставки еды</title>
   </head>
 
-  <body>
+  <body id="home">
     <header class="header">
       <div class="header__wrapper">
         <div class="mobile">
@@ -50,15 +50,19 @@
                 <li class="mobile__item">
                   <a
                     class="mobile__link animated-link mobile__link--active"
-                    href="#"
+                    href="#home"
                     >Главная</a
                   >
                 </li>
                 <li class="mobile__item">
-                  <a class="mobile__link animated-link" href="#">Блюда</a>
+                  <a class="mobile__link animated-link" href="#products"
+                    >Блюда</a
+                  >
                 </li>
                 <li class="mobile__item">
-                  <a class="mobile__link animated-link" href="#">Контакты</a>
+                  <a class="mobile__link animated-link" href="#contact"
+                    >Контакты</a
+                  >
                 </li>
               </ul>
               <address class="mobile__address">
@@ -144,7 +148,7 @@
         <div class="overlay"></div>
         <div class="container">
           <nav class="menu header__menu">
-            <a class="logo header__logo" href="#">
+            <a class="logo header__logo" href="#home">
               <img
                 class="logo__img header__logo-img"
                 src="./images/logo.svg"
@@ -155,15 +159,18 @@
             </a>
             <ul class="menu__list">
               <li class="menu__item">
-                <a class="menu__link animated-link menu__link--active" href="#">
+                <a
+                  class="menu__link animated-link menu__link--active"
+                  href="#home"
+                >
                   Главная
                 </a>
               </li>
               <li class="menu__item">
-                <a class="menu__link animated-link" href="#">Блюда</a>
+                <a class="menu__link animated-link" href="#products">Блюда</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link animated-link" href="#">Контакты</a>
+                <a class="menu__link animated-link" href="#contact">Контакты</a>
               </li>
             </ul>
             <ul class="actions-list">
@@ -228,7 +235,7 @@
         </div>
       </section>
 
-      <section class="popular-categories">
+      <section class="popular-categories" id="products">
         <div class="container">
           <h2 class="title popular-categories__title">Популярные категории</h2>
           <ul class="popular-categories__nav-list">
@@ -906,9 +913,9 @@
 
     <footer class="footer">
       <div class="container">
-        <div class="footer__top">
+        <div class="footer__top" id="contact">
           <div class="footer-subscribe">
-            <a class="logo footer__logo" href="#">
+            <a class="logo footer__logo" href="#home">
               <img
                 class="logo__img"
                 src="./images/logo.svg"
