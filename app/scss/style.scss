@@ -83,6 +83,41 @@
   }
 }
 
+.breadcrumbs {
+  width: 100vw;
+  height: 65px;
+  background-color: rgba($accent-800, 0.1);
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    color: $darkGrey;
+    font-size: 14px;
+    line-height: 1.2;
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+
+    &:not(:last-child)::after {
+      @include pseudo(inline-block, relative);
+      @extend %background-image;
+      background-image: url('../images/sprite.svg#icon-arrow-left');
+      width: 6px;
+      height: 10px;
+      stroke-width: 1px;
+      transform: scale(-1);
+      left: 6px;
+      filter: invert(100%) sepia(0%) saturate(3952%) hue-rotate(61deg)
+        brightness(79%) contrast(89%);
+    }
+  }
+}
+
 .mobile {
   height: 100vh;
   background-color: $silver-100;
