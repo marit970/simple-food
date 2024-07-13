@@ -97,5 +97,11 @@ $('.menu__link, .mobile__link, .logo').on('click', function (event) {
   );
 });
 
+$("#filter__price-slider").ionRangeSlider({
+  min: 0,
+  max: 1200,
+  type: 'double',
+});
+
 // eslint-disable-next-line no-undef
 mixitup('.popular-categories__list');

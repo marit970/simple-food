@@ -7,6 +7,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x26.png">
     <link rel="manifest" href="/site.webmanifest">
+    <!-- Importing this file via libs doesn't work because of the MIME type. See https://stackoverflow.com/questions/48248832/stylesheet-not-loaded-because-of-mime-type  -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
     <title>SimpleFood сервис доставки еды</title>
   </head>
@@ -230,7 +233,10 @@
                     <span class="filter__price-currency filter__price-span">₴</span>
                   </div>
                 </div>
-                <div class="price__range-slider"></div>
+                <div class="filter__price-range">
+                  <input class="filter__price-slider" type="text" id="filter__price-slider" name="filter__price-slider"
+                    value="" />
+                </div>
               </div>
             </div>
             <div class="catalog__products">
