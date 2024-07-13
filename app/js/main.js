@@ -6,6 +6,13 @@ $('.menu__link').on('click', function (event) {
   $(this).addClass('menu__link--active');
 });
 
+$('.filter__categories-link').on('click', function (event) {
+  event.preventDefault();
+
+  $('.filter__categories-link').removeClass('filter__categories-link--active');
+  $(this).addClass('filter__categories-link--active');
+});
+
 // mobile Menu
 const burgerInactive = document.querySelector('.burger--inactive');
 const burgerActive = document.querySelector('.burger--active');
