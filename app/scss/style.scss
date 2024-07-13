@@ -1532,6 +1532,9 @@
 .filter {
   max-width: 270px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 
   &__label {
     color: #31352b;
@@ -1555,7 +1558,9 @@
     border-bottom: 1px solid #ececec;
   }
 
-  &__categories {
+  &__categories,
+  &__offers,
+  &__price {
     border-radius: 5px;
     border: 1px solid #ececec;
     background: #fff;
@@ -1571,12 +1576,6 @@
     }
   }
 
-  &__offers {
-    border-radius: 5px;
-    border: 1px solid #ececec;
-    background: #fff;
-  }
-
   &__offers-list {
     padding: 26px 15px;
   }
@@ -1589,5 +1588,29 @@
 
   &__offers-input {
     margin-right: 10px;
+  }
+
+  &__price-wrapper {
+    padding: 25px 15px;
+    display: flex;
+    gap: 21px;
+  }
+
+  &__price-item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__price-span {
+    color: #c2c2c2;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-right: 5px;
+  }
+
+  &__price-input {
+    width: 70px;
+    margin-right: 5px;
   }
 }
