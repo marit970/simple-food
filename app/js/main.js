@@ -144,45 +144,55 @@ $("#filter__price-slider").ionRangeSlider({
 $('select').styler();
 
 
-$('.pagination__page').on('click', function (event) {
-  event.preventDefault();
-
-  $('.pagination__page').removeClass('pagination__page--active');
-  $('.pagination__button--prev').removeClass('pagination__button--inactive').prop("disabled",false);
-  $('.pagination__button--next').removeClass('pagination__button--inactive').prop("disabled",false);
-  $(this).addClass('pagination__page--active');
-
-  if ($(this).hasClass('pagination__page--first')) {
-    $('.pagination__button--prev').addClass('pagination__button--inactive').prop("disabled",true);
-  }
-
-  if ($(this).hasClass('pagination__page--last')) {
-    $('.pagination__button--next').addClass('pagination__button--inactive').prop("disabled",true);
-  }
-});
-
-  $('.pagination__button--prev').on('click', function () {
-    $('.pagination__button--next').removeClass('pagination__button--inactive').prop("disabled",false);
-
-    const index = $('.pagination__page--active').index('.pagination__page');
-    console.log('Current index:', index);
+  // Function to update button states
+  function updateButtonStates() {
+    const currentIndex = $('.pagination__page--active').index('.pagination__page');
+    const lastIndex = $('.pagination__page').length - 1;
     
-    // Check if there is a previous element
-    if (index > 0) {
+    // Disable prev button if on first page
+    if (currentIndex === 0) {
+      $('.pagination__button--prev').prop('disabled', true);
+    } else {
+      $('.pagination__button--prev').prop('disabled', false);
+    }
+    
+    // Disable next button if on last page
+    if (currentIndex === lastIndex) {
+      $('.pagination__button--next').prop('disabled', true);
+    } else {
+      $('.pagination__button--next').prop('disabled', false);
+    }
+  }
+
+  // Initial setup: activate the first page
+  $('.pagination__page--first').addClass('pagination__page--active');
+  updateButtonStates();
+
+  // Handle page button clicks
+  $('.pagination__page').on('click', function () {
+    $('.pagination__page').removeClass('pagination__page--active');
+    $(this).addClass('pagination__page--active');
+    updateButtonStates();
+  });
+
+  // Handle prev button click
+  $('.pagination__button--prev').on('click', function () {
+    const currentIndex = $('.pagination__page--active').index('.pagination__page');
+    if (currentIndex > 0) {
       $('.pagination__page').removeClass('pagination__page--active');
-      $('.pagination__page').eq(index - 1).addClass('pagination__page--active');
+      $('.pagination__page').eq(currentIndex - 1).addClass('pagination__page--active');
+      updateButtonStates();
     }
   });
-  
+
+  // Handle next button click
   $('.pagination__button--next').on('click', function () {
-    $('.pagination__button--prev').removeClass('pagination__button--inactive').prop("disabled",false);
-    const index = $('.pagination__page--active').index('.pagination__page');
-    console.log('Current index:', index);
-    
-    // Check if there is a previous element
-    if (index < $('.pagination__page').length-1) {
+    const currentIndex = $('.pagination__page--active').index('.pagination__page');
+    const lastIndex = $('.pagination__page').length - 1;
+    if (currentIndex < lastIndex) {
       $('.pagination__page').removeClass('pagination__page--active');
-      $('.pagination__page').eq(index + 1).addClass('pagination__page--active');
+      $('.pagination__page').eq(currentIndex + 1).addClass('pagination__page--active');
+      updateButtonStates();
     }
   });
 // eslint-disable-next-line no-undef
