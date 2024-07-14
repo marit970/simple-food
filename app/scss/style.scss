@@ -1552,8 +1552,8 @@
 }
 
 .catalog {
+  padding: $sectionPadding 0;
   &__top {
-    margin-top: $sectionPadding;
     display: flex;
     justify-content: space-between;
   }
