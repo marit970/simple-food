@@ -4037,6 +4037,18 @@ isurl@^1.0.0-alpha5:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
 
+jquery-form-styler@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.npmjs.org/jquery-form-styler/-/jquery-form-styler-2.0.2.tgz"
+  integrity sha512-gWjOmLq8waIqkt9oCCUspGLvknTesh3m8BjACl250Gb0XRs1ZeRBq3zNqQeDg/eaZjEEbDOS4Wcr4PMHI7IsMg==
+  dependencies:
+    jquery "^1.7.0"
+
+jquery@^1.7.0:
+  version "1.12.4"
+  resolved "https://registry.npmjs.org/jquery/-/jquery-1.12.4.tgz"
+  integrity sha512-UEVp7PPK9xXYSk8xqXCJrkXnKZtlgWkd2GsAQbMRFK6S/ePU2JN5G2Zum8hIVjzR3CpdfSqdqAzId/xd4TJHeg==
+
 jquery@^3.5.1, jquery@>=1.8, jquery@>=1.8.0:
   version "3.7.1"
   resolved "https://registry.npmjs.org/jquery/-/jquery-3.7.1.tgz"

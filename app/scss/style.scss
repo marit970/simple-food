@@ -1588,9 +1588,7 @@
     border-bottom: 1px solid #ececec;
   }
 
-  &__categories,
-  &__offers,
-  &__price {
+  &__wrapper {
     border-radius: 5px;
     border: 1px solid #ececec;
     background: #fff;
@@ -1606,6 +1604,10 @@
     }
   }
 
+  &__categories-link--active {
+    color: $accent-900;
+  }
+
   &__offers-list {
     padding: 26px 15px;
   }
@@ -1617,7 +1619,35 @@
   }
 
   &__offers-input {
-    margin-right: 10px;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+    &:checked + .filter__offers-checkbox {
+      @extend %background-image;
+      background-image: url('../images/sprite.svg#icon-check');
+      background-size: 15px;
+    }
+  }
+
+  &__offers-checkbox {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background-color: #faeded;
+    margin-left: -20px;
+
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  &__offers-label {
+    margin-left: 16px;
+  }
+
+  &__offers-input-label {
+    margin-left: 16px;
   }
 
   &__price-wrapper {

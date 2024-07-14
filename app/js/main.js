@@ -111,5 +111,7 @@ $("#filter__price-slider").ionRangeSlider({
   type: 'double',
 });
 
+$('select').styler();
+
 // eslint-disable-next-line no-undef
 mixitup('.popular-categories__list');

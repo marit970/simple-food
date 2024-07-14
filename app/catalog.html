@@ -10,6 +10,8 @@
     <!-- Importing this file via libs doesn't work because of the MIME type. See https://stackoverflow.com/questions/48248832/stylesheet-not-loaded-because-of-mime-type  -->
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+    <link href="/../node_modules/jquery-form-styler/dist/jquery.formstyler.css" />
+    <link href="/../node_modules/jquery-form-styler/dist/jquery.formstyler.theme.csss" />
     <link rel="stylesheet" href="css/style.min.css">
     <title>SimpleFood сервис доставки еды</title>
   </head>
@@ -32,10 +34,10 @@
               </div>
               <ul class="mobile__list">
                 <li class="mobile__item">
-                  <a class="mobile__link animated-link mobile__link--active" href="#home">Главная</a>
+                  <a class="mobile__link animated-link" href="/">Главная</a>
                 </li>
                 <li class="mobile__item">
-                  <a class="mobile__link animated-link" href="#products">Блюда</a>
+                  <a class="mobile__link animated-link mobile__link--active" href="#products">Блюда</a>
                 </li>
                 <li class="mobile__item">
                   <a class="mobile__link animated-link" href="#contact">Контакты</a>
@@ -107,12 +109,12 @@
             </a>
             <ul class="menu__list">
               <li class="menu__item">
-                <a class="menu__link animated-link menu__link--active" href="#home">
+                <a class="menu__link animated-link" href="/">
                   Главная
                 </a>
               </li>
               <li class="menu__item">
-                <a class="menu__link animated-link" href="#products">Блюда</a>
+                <a class="menu__link animated-link menu__link--active" href="#products">Блюда</a>
               </li>
               <li class="menu__item">
                 <a class="menu__link animated-link" href="#contact">Контакты</a>
@@ -146,8 +148,8 @@
         <div class="breadcrumbs">
           <div class="container">
             <ul class="breadcrumbs__list">
-              <li class="breadcrumbs__item">Главная</li>
-              <li class="breadcrumbs__item">Каталог товаров</li>
+              <li class="breadcrumbs__item"><a class="breadcrumbs__item animated-link" href="/">Главная</a></li>
+              <l class="breadcrumbs__item"><span class="breadcrumbs__item" href="#">Каталог товаров</span></l>
             </ul>
           </div>
         </div>
@@ -165,8 +167,9 @@
             </div>
           </div>
           <div class="catalog__content">
+
             <div class="filter">
-              <div class="filter__categories">
+              <div class="filter__wrapper">
                 <h2 class="filter__title">Категории</h2>
                 <ul class="filter__categories-list">
                   <li class="filter__categories-item">
@@ -196,30 +199,33 @@
                   </li>
                 </ul>
               </div>
-              <div class="filter__offers">
+              <div class="filter__wrapper">
                 <h2 class="filter__title">Предложения</h2>
                 <ul class="filter__offers-list">
                   <li class="filter__offers-item">
-                    <label for="filter__offers-label">
+                    <label class="filter__offers-label">
                       <input class="filter__offers-input" type="checkbox" name="filter__offers-sale">
-                      <span class="filter__offers-label filter__label">Со скидкой</span>
+                      <span class="filter__offers-checkbox"></span>
+                      <span class=" filter__offers-input-label filter__label">Со скидкой</span>
                     </label>
                   </li>
                   <li class="filter__offers-item">
-                    <label for="filter__offers-label filter__label">
+                    <label class="filter__offers-label">
                       <input class="filter__offers-input" type="checkbox" name="filter__offers-new">
-                      <span class="filter__offers-label filter__label">Новинка</span>
+                      <span class="filter__offers-checkbox"></span>
+                      <span class="filter__offers-input-label filter__label">Новинка</span>
                     </label>
                   </li>
                   <li class="filter__offers-item">
-                    <label for="filter__offers-label">
+                    <label class="filter__offers-label">
                       <input class="filter__offers-input" type="checkbox" name="filter__offers-popular">
-                      <span class="filter__offers-label filter__label">Хит</span>
+                      <span class="filter__offers-checkbox"></span>
+                      <span class="filter__offers-input-label filter__label">Хит</span>
                     </label>
                   </li>
                 </ul>
               </div>
-              <div class="filter__price">
+              <div class="filter__wrapper">
                 <h2 class="filter__title">Цена</h2>
                 <div class="filter__price-wrapper">
                   <div class="filter__price-item filter__price-item--from">
@@ -239,6 +245,7 @@
                 </div>
               </div>
             </div>
+
             <div class="catalog__products">
               <div class="catalog__products-list">
 
