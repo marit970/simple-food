@@ -105,13 +105,31 @@ $('.menu__link, .mobile__link, .logo').on('click', function (event) {
   );
 });
 
+$('.filter__price-input--from').on('change', function () {
+  const from = $(this).val();
+  const to = $('.filter__price-input--to').val();
+  $('#filter__price-slider').data('ionRangeSlider').update({
+    from,
+    to,
+  });
+});
+
+$('.filter__price-input--to').on('change', function () {
+  const to = $(this).val();
+  const from = $('.filter__price-input--from').val();
+  $('#filter__price-slider').data('ionRangeSlider').update({
+    from,
+    to,
+  });
+});
+
 $("#filter__price-slider").ionRangeSlider({
   min: 0,
   max: 1200,
   type: 'double',
   onStart: function (data) {
-    const from = data.from;
     const to = data.to;
+    const from = data.from;
     $('.filter__price-input--from').attr('value', from);
     $('.filter__price-input--to').attr('value', to);
   },
