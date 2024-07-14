@@ -1557,6 +1557,61 @@
     display: flex;
     justify-content: space-between;
   }
+
+  .jq-selectbox__select {
+    height: 47px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #c2c2c2;
+    border-radius: 3px;
+  }
+
+  .jq-selectbox li {
+    transition: background-color 0.5s ease;
+
+    &:hover,
+    &.selected {
+      background: $orange-light;
+    }
+  }
+
+  .jq-selectbox__select-text {
+    color: #31352b;
+  }
+
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
+
+  .jq-selectbox__trigger-arrow {
+    top: 20px;
+    border-top: 5px solid #c2c2c2;
+    transition: border-top 0.5s ease;
+  }
+
+  &__select {
+    &:focus {
+      border: 1px solid #ff6838;
+    }
+    .jq-selectbox__select {
+      &:hover {
+        border: 1px solid $accent-900;
+        color: $accent-900;
+        transition:
+          color 0.5s ease,
+          border 0.5s ease;
+
+        .jq-selectbox__trigger-arrow {
+          border-top: 5px solid $accent-900;
+        }
+      }
+
+      &:focus {
+        border: 1px solid #ff6838;
+      }
+    }
+  }
 }
 
 .filter {

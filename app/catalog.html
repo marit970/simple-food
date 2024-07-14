@@ -7,11 +7,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x26.png">
     <link rel="manifest" href="/site.webmanifest">
-    <!-- Importing this file via libs doesn't work because of the MIME type. See https://stackoverflow.com/questions/48248832/stylesheet-not-loaded-because-of-mime-type  -->
+    <!-- Importing these files via libs doesn't work because of the MIME type. See https://stackoverflow.com/questions/48248832/stylesheet-not-loaded-because-of-mime-type  -->
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
-    <link href="/../node_modules/jquery-form-styler/dist/jquery.formstyler.css" />
-    <link href="/../node_modules/jquery-form-styler/dist/jquery.formstyler.theme.csss" />
+    <link rel="stylesheet" href="css/jquery.formstyler.css" />
+    <link rel="stylesheet" href="css/jquery.formstyler.theme.css" />
+    <!--   -->
     <link rel="stylesheet" href="css/style.min.css">
     <title>SimpleFood сервис доставки еды</title>
   </head>
@@ -162,8 +163,18 @@
           <div class="catalog__top">
             <h1 class="title catalog__title">Каталог продуктов</h1>
             <div class="catalog__sort">
-              <select name="" id="" class="catalog__sort-name"></select>
-              <select name="" id="" class="catalog__sort-number"></select>
+              <select class="catalog__sort-name catalog__select">
+                <option value="1">По названию</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+              <select class="catalog__sort-number catalog__select">
+                <option value="1">по 12</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
             </div>
           </div>
           <div class="catalog__content">
