@@ -1838,3 +1838,39 @@
 .irs-single {
   display: none;
 }
+
+.pagination {
+  @extend %display-flex;
+  &__page {
+    width: 48px;
+    height: 48px;
+    border-radius: 3px;
+    background: #faeded;
+    display: flex;
+    color: #363853;
+    @extend %display-flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+  }
+
+  &__page--next {
+    .pagination__item-icon {
+      transform: scale(-1);
+    }
+  }
+
+  &__item-icon {
+    fill: #363853;
+    width: 10px;
+    height: 14px;
+    stroke-width: 1px;
+
+    &--inactive {
+      fill: #c2c2c2;
+    }
+  }
+}
