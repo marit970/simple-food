@@ -147,59 +147,43 @@ $('select').styler();
 $('.pagination__page').on('click', function (event) {
   event.preventDefault();
 
-  $('.pagination__button').removeClass('pagination__button--active');
-  $('.pagination__page--prev').removeClass('pagination__button--inactive').prop("disabled",false);
-  $('.pagination__page--next').removeClass('pagination__button--inactive').prop("disabled",false);
-  $(this).addClass('pagination__button--active');
+  $('.pagination__page').removeClass('pagination__page--active');
+  $('.pagination__button--prev').removeClass('pagination__button--inactive').prop("disabled",false);
+  $('.pagination__button--next').removeClass('pagination__button--inactive').prop("disabled",false);
+  $(this).addClass('pagination__page--active');
 
   if ($(this).hasClass('pagination__page--first')) {
-    $('.pagination__page--prev').addClass('pagination__button--inactive').prop("disabled",true);
+    $('.pagination__button--prev').addClass('pagination__button--inactive').prop("disabled",true);
   }
 
   if ($(this).hasClass('pagination__page--last')) {
-    $('.pagination__page--next').addClass('pagination__button--inactive').prop("disabled",true);
+    $('.pagination__button--next').addClass('pagination__button--inactive').prop("disabled",true);
   }
 });
 
-  // Get the second article.pagination__item
-  const secondItem = document.querySelector(".pagination__item:nth-child(2)");
+  $('.pagination__button--prev').on('click', function () {
+    $('.pagination__button--next').removeClass('pagination__button--inactive').prop("disabled",false);
 
-  if (secondItem) {
-    // Check if it contains a child with the specified classes
-    const activePage = secondItem.querySelector(".pagination__page.pagination__page--active");
-
-    if (activePage) {
-      // Get the previous sibling article.pagination__item
-      const previousItem = secondItem.previousElementSibling;
-
-      if (previousItem && previousItem.classList.contains("pagination__item")) {
-        // Add a class to change the background
-        previousItem.classList.add("highlighted-prev");
-      }
+    const index = $('.pagination__page--active').index('.pagination__page');
+    console.log('Current index:', index);
+    
+    // Check if there is a previous element
+    if (index > 0) {
+      $('.pagination__page').removeClass('pagination__page--active');
+      $('.pagination__page').eq(index - 1).addClass('pagination__page--active');
     }
-  }
+  });
   
-
-  // if ($(this).hasClass('pagination__page--prev')) {
-  //   const index = $('.pagination__button--active').index('.pagination__page');
-  //   console.log('Current index:', index);
+  $('.pagination__button--next').on('click', function () {
+    $('.pagination__button--prev').removeClass('pagination__button--inactive').prop("disabled",false);
+    const index = $('.pagination__page--active').index('.pagination__page');
+    console.log('Current index:', index);
     
-  //   // Check if there is a previous element
-  //   if (index > 0) {
-  //     $('.pagination__page').removeClass('pagination__page--active');
-  //     $('.pagination__page').eq(index - 1).addClass('pagination__button--active');
-  //   }
-  // }
-
-  // if ($(this).hasClass('pagination__page--next')) {
-  //   const index = $('.pagination__page--active').index('.pagination__page');
-  //   console.log('Current index:', index);
-    
-  //   // Check if there is a previous element
-  //   if (index > 5) {
-  //     $('.pagination__page').removeClass('pagination__page--active');
-  //     $('.pagination__page').eq(index - 1).addClass('pagination__button--active');
-  //   }
-  // }
+    // Check if there is a previous element
+    if (index < $('.pagination__page').length-1) {
+      $('.pagination__page').removeClass('pagination__page--active');
+      $('.pagination__page').eq(index + 1).addClass('pagination__page--active');
+    }
+  });
 // eslint-disable-next-line no-undef
 mixitup('.popular-categories__list');
