@@ -1695,8 +1695,21 @@
     border: 1px solid #ececec;
     border-radius: 3px;
     cursor: pointer;
+    @include tr(border-color);
 
     &:focus {
+      border: 1px solid #ff6838;
+    }
+
+    &:hover {
+      border: 1px solid #ff6838;
+
+      & + .filter__offers-input-label {
+        color: #ff6838;
+      }
+    }
+
+    &:active {
       border: 1px solid #363853;
     }
   }
@@ -1707,6 +1720,7 @@
 
   &__offers-input-label {
     margin-left: 16px;
+    @include tr(color);
   }
 
   &__price-wrapper {
