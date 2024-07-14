@@ -29,6 +29,21 @@
     left: 0;
     right: 0;
     z-index: 999;
+
+    &--active {
+      transition: background-color 0.5s ease;
+      background-color: $silver-100;
+      .header__menu {
+        transition: padding 0.5s ease;
+        padding: 30px 0;
+        @include mq('tablet-2') {
+          padding: 15px 0;
+        }
+        @include mq('phone') {
+          padding: 5px 0;
+        }
+      }
+    }
   }
 
   &__logo {
@@ -64,21 +79,6 @@
 
     @include mq('phone') {
       padding: 0;
-    }
-  }
-
-  &--active {
-    transition: background-color 0.5s ease;
-    background-color: $silver-100;
-    .header__menu {
-      transition: padding 0.5s ease;
-      padding: 30px 0;
-      @include mq('tablet-2') {
-        padding: 15px 0;
-      }
-      @include mq('phone') {
-        padding: 5px 0;
-      }
     }
   }
 }
@@ -285,7 +285,7 @@
       height: 400px;
       background-size: contain;
       z-index: -1;
-      top: 140px;
+      top: 100px;
       right: 0;
     }
 
@@ -555,8 +555,7 @@
 
     @include mq('phone') {
       grid-template-columns: repeat(2, 1fr);
-      row-gap: 10px;
-      column-gap: 5px;
+      gap: 5px;
     }
   }
 
@@ -608,6 +607,7 @@
 }
 
 .features {
+  position: relative;
   padding: $sectionPadding 0;
 
   @include mq('desktop') {
@@ -667,6 +667,7 @@
       width: 345px;
       height: 462px;
       z-index: -1;
+      top: 0;
     }
 
     &::after {
@@ -839,15 +840,7 @@
   margin: 0 auto;
 
   @include mq('desktop') {
-    max-width: 300px;
-  }
-
-  @include mq('tablet-2') {
-    max-width: 320px;
-  }
-
-  @include mq('tablet') {
-    max-width: 290px;
+    max-width: 100%;
   }
 
   @include mq('phone') {
@@ -859,21 +852,9 @@
   }
 
   &__image {
-    max-width: 370px;
+    max-width: 100%;
     height: 300px;
     border-radius: 10px 10px 0 0;
-
-    @include mq('desktop') {
-      max-width: 300px;
-    }
-
-    @include mq('tablet-2') {
-      max-width: 290px;
-    }
-
-    @include mq('tablet') {
-      max-width: 250px;
-    }
 
     @include mq('phone') {
       max-width: 345px;
@@ -1280,19 +1261,19 @@
   &__top {
     display: flex;
     padding-bottom: $sectionPadding;
-    column-gap: 70px;
+    gap: 70px;
 
     @include mq('desktop') {
-      column-gap: $sectionPaddingDesktop;
+      gap: $sectionPaddingDesktop;
+      flex-wrap: wrap;
     }
 
     @include mq('tablet-2') {
-      column-gap: $sectionPaddingTablet;
+      gap: $sectionPaddingTablet;
     }
 
     @include mq('tablet') {
       padding-bottom: 30px;
-      flex-wrap: wrap;
       gap: 30px;
     }
 
@@ -1331,17 +1312,14 @@
     flex-direction: column;
     align-items: flex-start;
 
-    @include mq('phone') {
+    @include mq('desktop') {
       order: 2;
     }
   }
 }
 
 .footer-menu {
-  @include mq('tablet') {
-    order: 1;
-  }
-  @include mq('phone') {
+  @include mq('desktop') {
     order: 3;
   }
 
@@ -1352,9 +1330,10 @@
 
     @include mq('desktop') {
       column-gap: $sectionPaddingDesktop;
+      grid-template-columns: repeat(4, auto);
     }
 
-    @include mq('tablet-2') {
+    @include mq('tablet') {
       grid-template-columns: repeat(2, auto);
     }
 
@@ -1366,6 +1345,57 @@
   &__item {
     padding-bottom: 20px;
     text-align: left;
+
+    &:nth-child(1) {
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      order: 5;
+    }
+
+    &:nth-child(3) {
+      order: 9;
+    }
+
+    &:nth-child(4) {
+      order: 2;
+    }
+
+    &:nth-child(5) {
+      order: 6;
+    }
+
+    &:nth-child(6) {
+      order: 10;
+    }
+
+    &:nth-child(7) {
+      order: 3;
+    }
+
+    &:nth-child(8) {
+      order: 7;
+    }
+
+    &:nth-child(9) {
+      order: 11;
+    }
+
+    &:nth-child(10) {
+      order: 4;
+    }
+
+    &:nth-child(11) {
+      order: 8;
+    }
+
+    &:nth-child(12) {
+      order: 12;
+    }
+
+    @include mq('phone') {
+    }
   }
 
   &__link {

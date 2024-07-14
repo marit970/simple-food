@@ -50,10 +50,10 @@ $('.mobile__link').on('click', function (event) {
 // window scroll
 $(window).on('load scroll', function () {
   if ($(window).scrollTop() > 0) {
-    $('.header__wrapper').addClass('header--active');
+    $('.header__wrapper').addClass('header__wrapper--active');
   } else {
     // if going back to init position
-    $('.header__wrapper').removeClass('header--active');
+    $('.header__wrapper').removeClass('header__wrapper--active');
   }
 });
 
@@ -76,12 +76,20 @@ $('.testimonials__content').slick({
 });
 
 // mobile slider for popular-categories
-if (window.matchMedia('(max-width: 576px)').matches) {
-  $('.restaurants__list').slick({
-    dots: true,
-    arrows: false,
-  });
-}
+$(window).on('load resize', function () {
+  if ($(window).width() < 576) {
+    $('.restaurants__list:not(.slick-initialized)').slick({
+      arrows: false,
+      dots: true,
+      infinite: true,
+      speed: 100,
+      slidesToShow: 1
+    });
+  } else {
+    $(".restaurants__list.slick-initialized").slick("unslick");
+  }
+});
+
 
 $('.menu__link, .mobile__link, .logo').on('click', function (event) {
   event.preventDefault();

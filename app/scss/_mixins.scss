@@ -74,7 +74,7 @@
   }
 
   &::after {
-    top: calc(75% - $burgerLineHeight);
+    top: 75%;
   }
 
   &--active {
