@@ -1841,7 +1841,7 @@
 
 .pagination {
   @extend %display-flex;
-  &__page {
+  &__button {
     width: 48px;
     height: 48px;
     border-radius: 3px;
@@ -1849,6 +1849,30 @@
     display: flex;
     color: #363853;
     @extend %display-flex;
+    @include tr(background-color, color, box-shadow, border);
+
+    &:hover {
+      background-color: #ff6838;
+      color: $white;
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 2px #ff6838;
+    }
+
+    &:active {
+      box-shadow: 0px -1px 4px 2px rgba(0, 0, 0, 0.15) inset;
+    }
+
+    &--active {
+      border: 1px solid #363853;
+    }
+
+    &--inactive {
+      .pagination__item-icon {
+        fill: #c2c2c2;
+      }
+    }
   }
 
   &__item {
@@ -1868,9 +1892,5 @@
     width: 10px;
     height: 14px;
     stroke-width: 1px;
-
-    &--inactive {
-      fill: #c2c2c2;
-    }
   }
 }
