@@ -109,6 +109,18 @@ $("#filter__price-slider").ionRangeSlider({
   min: 0,
   max: 1200,
   type: 'double',
+  onStart: function (data) {
+    const from = data.from;
+    const to = data.to;
+    $('.filter__price-input--from').attr('value', from);
+    $('.filter__price-input--to').attr('value', to);
+  },
+  onChange: function (data) {
+    const from = data.from;
+    const to = data.to;
+    $('.filter__price-input--from').attr('value', from);
+    $('.filter__price-input--to').attr('value', to);
+  }
 });
 
 $('select').styler();

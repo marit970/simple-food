@@ -1637,9 +1637,13 @@
     position: absolute;
     background-color: #faeded;
     margin-left: -20px;
-
-    border-radius: 4px;
+    border: 1px solid #ececec;
+    border-radius: 3px;
     cursor: pointer;
+
+    &:focus {
+      border: 1px solid #363853;
+    }
   }
 
   &__offers-label {
@@ -1672,6 +1676,11 @@
   &__price-input {
     width: 70px;
     margin-right: 5px;
+    border-radius: 3px;
+    border: 1px solid #faeded;
+    background: #faeded;
+    text-align: center;
+    color: #31352b;
   }
 
   &__price-range {
