@@ -78,7 +78,7 @@ $('.testimonials__content').slick({
 // mobile slider for popular-categories
 $(window).on('load resize', function () {
   if ($(window).width() < 576) {
-    $('.restaurants__list:not(.slick-initialized)').slick({
+    $('.offers__list:not(.slick-initialized)').slick({
       arrows: false,
       dots: true,
       infinite: true,
@@ -94,7 +94,7 @@ $(window).on('load resize', function () {
       slidesToShow: 1
     });
 
-  } else {
+  }  else {
     $(".restaurants__list.slick-initialized").slick("unslick");
     $(".offers__list.slick-initialized").slick("unslick");
   }

@@ -94,11 +94,11 @@
   }
 
   @include mq('tablet-2') {
-    padding-bottom: (94px + 65px);
+    padding-bottom: 191px;
   }
 
   @include mq('phone') {
-    padding-bottom: 110px;
+    padding-bottom: 111px;
   }
 }
 
@@ -593,6 +593,7 @@
     font-size: 15px;
     line-height: 1.2;
     flex-grow: 1;
+    text-align: center;
   }
 
   &__price {
@@ -1710,7 +1711,7 @@
   flex-direction: column;
   gap: 30px;
 
-  @include mq('phone') {
+  @include mq('tablet') {
     display: none;
   }
 
@@ -1956,12 +1957,41 @@
 .offers {
   padding: $sectionPadding 0;
 
+  @include mq('desktop') {
+    padding: $sectionPaddingDesktop 0;
+  }
+
+  @include mq('tablet-2') {
+    padding: $sectionPaddingTablet 0;
+  }
+
+  @include mq('phone') {
+    padding: $sectionPaddingPhone 0;
+  }
+
   &__card {
     max-width: 370px;
     width: 100%;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+  }
+
+  &__card-image {
+    border-radius: 10px;
+    @include mq('tablet') {
+      min-width: 320px;
+    }
+  }
+
+  &__card-content {
+    @include mq('desktop') {
+      min-height: 123px;
+    }
+    @include mq('phone') {
+      min-height: unset;
+    }
   }
 
   &__list {
@@ -1969,13 +1999,18 @@
     justify-content: center;
     gap: 30px;
 
+    @include mq('tablet') {
+      overflow: auto;
+      justify-content: flex-start;
+    }
+
     @include mq('phone') {
       display: flex;
       flex-direction: column;
     }
 
     .slick-dots {
-      margin: 0 auto;
+      margin: 2px auto;
     }
   }
 
