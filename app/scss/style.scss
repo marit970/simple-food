@@ -1966,7 +1966,17 @@
 
   &__list {
     display: flex;
+    justify-content: center;
     gap: 30px;
+
+    @include mq('phone') {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slick-dots {
+      margin: 0 auto;
+    }
   }
 
   &__card-content {

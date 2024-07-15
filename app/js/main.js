@@ -85,8 +85,18 @@ $(window).on('load resize', function () {
       speed: 100,
       slidesToShow: 1
     });
+
+    $('.offers__list:not(.slick-initialized)').slick({
+      arrows: false,
+      dots: true,
+      infinite: true,
+      speed: 100,
+      slidesToShow: 1
+    });
+
   } else {
     $(".restaurants__list.slick-initialized").slick("unslick");
+    $(".offers__list.slick-initialized").slick("unslick");
   }
 });
 
