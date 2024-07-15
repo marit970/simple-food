@@ -17,6 +17,10 @@ $('.filter__categories-link').on('click', function (event) {
 const burgerInactive = document.querySelector('.burger--inactive');
 const burgerActive = document.querySelector('.burger--active');
 const mobileMenu = document.querySelector('.mobile');
+const filter = document.querySelector('.filter');
+const filterBurgerInactive = document.querySelector('.catalog__filter-btn');
+const filterBurgerActive = document.querySelector('.filter__wrapper-btn');
+
 const overlay = document.querySelector('.overlay');
 
 burgerInactive.addEventListener('click', () => {
@@ -32,9 +36,25 @@ burgerActive.addEventListener('click', () => {
 });
 
 overlay.addEventListener('click', () => {
+  filter.classList.remove('filter--active');
   mobileMenu.classList.remove('mobile--active');
   overlay.classList.remove('overlay--active');
   $('body').removeClass('lock');
+  $('main').removeClass('lock');
+});
+
+// close filter
+filterBurgerActive.addEventListener('click', () => {
+  filter.classList.remove('filter--active');
+  overlay.classList.remove('overlay--active');
+  $('.header__burger').attr('disabled', false);  
+   $('main').removeClass('lock');
+});
+
+// open filter
+filterBurgerInactive.addEventListener('click', () => {
+  $('.header__burger').attr('disabled', true);  
+   $('main').addClass('lock');
 });
 
 /* eslint-disable no-undef */
@@ -205,5 +225,13 @@ $('select').styler();
       updateButtonStates();
     }
   });
+
+  $('.catalog__filter-btn').on('click', function (event) {
+    event.preventDefault();
+    overlay.classList.toggle('overlay--active');
+    $('.filter').toggleClass('filter--active');
+  });
+
+
 // eslint-disable-next-line no-undef
 mixitup('.popular-categories__list');
