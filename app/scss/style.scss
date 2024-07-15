@@ -838,7 +838,7 @@
 .restaurant-card {
   max-width: 370px;
   box-shadow: 0 3px 3px 0 rgba($black, 0.1);
-  background: $white;
+  background-color: $white;
   position: relative;
   border-radius: 10px;
   transition: box-shadow 0.5s ease;
@@ -1593,7 +1593,7 @@
     width: 47px;
     height: 47px;
     border-radius: 3px;
-    background-color: #faeded;
+    background-color: $rose-light;
     display: none;
 
     @include mq('tablet') {
@@ -1613,8 +1613,8 @@
     height: 47px;
     display: flex;
     align-items: center;
-    background: #fff;
-    border: 1px solid #c2c2c2;
+    background-color: $white;
+    border: 1px solid $grey;
     border-radius: 3px;
   }
 
@@ -1623,12 +1623,12 @@
 
     &:hover,
     &.selected {
-      background: $orange-light;
+      background-color: $orange-light;
     }
   }
 
   .jq-selectbox__select-text {
-    color: #31352b;
+    color: $dark;
   }
 
   .jq-selectbox__trigger {
@@ -1637,13 +1637,13 @@
 
   .jq-selectbox__trigger-arrow {
     top: 20px;
-    border-top: 5px solid #c2c2c2;
+    border-top: 5px solid $grey;
     transition: border-top 0.5s ease;
   }
 
   &__select {
     &:focus {
-      border: 1px solid #ff6838;
+      border: 1px solid $accent-900;
     }
     .jq-selectbox__select {
       &:hover {
@@ -1659,7 +1659,7 @@
       }
 
       &:focus {
-        border: 1px solid #ff6838;
+        border: 1px solid $accent-900;
       }
     }
   }
@@ -1748,7 +1748,7 @@
     width: 40px;
     height: 40px;
     border-radius: 3px;
-    background-color: #faeded;
+    background-color: $rose-light;
 
     &::before,
     &::after {
@@ -1771,7 +1771,7 @@
   }
 
   &__label {
-    color: #31352b;
+    color: $dark;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.2;
@@ -1783,19 +1783,19 @@
   }
 
   &__title {
-    color: #363853;
+    color: $darkBlue;
     font-size: 24px;
     font-weight: 400;
     line-height: 1.2;
     letter-spacing: 0.72px;
     padding: 15px;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid $silver-200;
   }
 
   &__wrapper {
     border-radius: 5px;
-    border: 1px solid #ececec;
-    background: #fff;
+    border: 1px solid $silver-200;
+    background-color: $white;
   }
 
   &__categories-list {
@@ -1832,7 +1832,7 @@
       @extend %background-image;
       background-image: url('../images/sprite.svg#icon-check');
       background-size: 15px;
-      border: 1px solid #363853;
+      border: 1px solid $darkBlue;
     }
   }
 
@@ -1840,27 +1840,27 @@
     width: 24px;
     height: 24px;
     position: absolute;
-    background-color: #faeded;
+    background-color: $rose-light;
     margin-left: -25px;
-    border: 1px solid #ececec;
+    border: 1px solid $silver-200;
     border-radius: 3px;
     cursor: pointer;
     @include tr(border-color);
 
     &:focus {
-      border: 1px solid #ff6838;
+      border: 1px solid $accent-900;
     }
 
     &:hover {
-      border: 1px solid #ff6838;
+      border: 1px solid $accent-900;
 
       & + .filter__offers-input-label {
-        color: #ff6838;
+        color: $accent-900;
       }
     }
 
     &:active {
-      border: 1px solid #363853;
+      border: 1px solid $darkBlue;
     }
   }
 
@@ -1885,7 +1885,7 @@
   }
 
   &__price-span {
-    color: #c2c2c2;
+    color: $grey;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.2;
@@ -1897,14 +1897,14 @@
     height: 40px;
     margin-right: 5px;
     border-radius: 3px;
-    border: 1px solid #faeded;
-    background: #faeded;
+    border: 1px solid $rose-light;
+    background-color: $rose-light;
     text-align: center;
-    color: #31352b;
+    color: $dark;
     transition: border 0.5s ease;
 
     &:focus {
-      border: 1px solid #ff6838;
+      border: 1px solid $accent-900;
     }
   }
 
@@ -1951,35 +1951,35 @@
     width: 48px;
     height: 48px;
     border-radius: 3px;
-    background: #faeded;
+    background-color: $rose-light;
     display: flex;
-    color: #363853;
+    color: $darkBlue;
     @extend %display-flex;
     @include tr(background-color, color, box-shadow, border);
 
     &:hover {
-      background-color: #ff6838;
+      background-color: $accent-900;
       color: $white;
     }
 
     &:focus {
-      box-shadow: 0px 0px 0px 2px #ff6838;
+      box-shadow: 0px 0px 0px 2px $accent-900;
     }
 
     &:active {
-      box-shadow: 0px -1px 4px 2px rgba(0, 0, 0, 0.15) inset;
+      box-shadow: 0px -1px 4px 2px rgba($black, 0.15) inset;
     }
 
     &:disabled {
       .pagination__item-icon {
-        fill: #c2c2c2;
+        fill: $grey;
       }
     }
   }
 
   &__page {
     &--active {
-      border: 1px solid #363853;
+      border: 1px solid $darkBlue;
     }
   }
 
@@ -2003,7 +2003,7 @@
   }
 
   &__item-icon {
-    fill: #363853;
+    fill: $darkBlue;
     width: 10px;
     height: 14px;
     stroke-width: 1px;
@@ -2029,8 +2029,8 @@
     max-width: 370px;
     width: 100%;
     border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+    background-color: $white;
+    box-shadow: 0px 3px 3px 0px rgba($black, 0.1);
     margin: 0 auto;
   }
 
