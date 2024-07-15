@@ -44,7 +44,7 @@ overlay.addEventListener('click', () => {
 });
 
 // close filter
-filterBurgerActive.addEventListener('click', () => {
+filterBurgerActive?.addEventListener('click', () => {
   filter.classList.remove('filter--active');
   overlay.classList.remove('overlay--active');
   $('.header__burger').attr('disabled', false);  
@@ -52,7 +52,7 @@ filterBurgerActive.addEventListener('click', () => {
 });
 
 // open filter
-filterBurgerInactive.addEventListener('click', () => {
+filterBurgerInactive?.addEventListener('click', () => {
   $('.header__burger').attr('disabled', true);  
    $('main').addClass('lock');
 });
@@ -98,7 +98,7 @@ $('.testimonials__content').slick({
 // mobile slider for popular-categories
 $(window).on('load resize', function () {
   if ($(window).width() < 576) {
-    $('.offers__list:not(.slick-initialized)').slick({
+    $('.restaurants__list:not(.slick-initialized)')?.slick({
       arrows: false,
       dots: true,
       infinite: true,
@@ -106,7 +106,7 @@ $(window).on('load resize', function () {
       slidesToShow: 1
     });
 
-    $('.offers__list:not(.slick-initialized)').slick({
+    $('.offers__list:not(.slick-initialized)')?.slick({
       arrows: false,
       dots: true,
       infinite: true,
