@@ -84,33 +84,33 @@
 }
 
 .header-catalog {
-  padding-bottom: 231px;
+  padding-bottom: (164px + 65px);
   @include mq('desktop') {
-    padding-bottom: 144px;
+    padding-bottom: (144px + 65px);
   }
 
   @include mq('tablet-2') {
-    padding-bottom: 124px;
+    padding-bottom: (124px + 65px);
   }
 
   @include mq('tablet-2') {
-    padding-bottom: 94px;
+    padding-bottom: (94px + 65px);
   }
 
   @include mq('phone') {
-    padding-bottom: 74px;
+    padding-bottom: 110px;
   }
 }
 
 .breadcrumbs {
   width: 100vw;
-  height: 65px;
   background-color: rgba($accent-800, 0.1);
   display: flex;
   align-items: center;
 
   &__list {
     display: flex;
+    padding: 24px 0;
   }
 
   &__item {
@@ -1553,9 +1553,54 @@
 
 .catalog {
   padding: $sectionPadding 0;
+
+  @include mq('desktop') {
+    padding: $sectionPaddingDesktop 0;
+  }
+
+  @include mq('tablet-2') {
+    padding: $sectionPaddingTablet 0;
+  }
+
+  @include mq('phone') {
+    padding: $sectionPaddingPhone 0;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
+
+    @include mq('phone') {
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__sort {
+    @include mq('tablet') {
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  &__filter-btn {
+    width: 47px;
+    height: 47px;
+    border-radius: 3px;
+    background-color: #faeded;
+    display: none;
+
+    @include mq('tablet') {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__filter-btn-icon {
+    width: 36px;
+    height: 32px;
+    fill: $accent-900;
   }
 
   .jq-selectbox__select {
@@ -1664,6 +1709,10 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  @include mq('phone') {
+    display: none;
+  }
 
   &__label {
     color: #31352b;
