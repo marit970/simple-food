@@ -39,6 +39,7 @@ overlay.addEventListener('click', () => {
   filter.classList.remove('filter--active');
   mobileMenu.classList.remove('mobile--active');
   overlay.classList.remove('overlay--active');
+  $('.header__burger').attr('disabled', false);  
   $('body').removeClass('lock');
   $('main').removeClass('lock');
 });
